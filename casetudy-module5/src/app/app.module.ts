@@ -6,6 +6,8 @@ import { ListCustomerComponent } from './customer/list-customer/list-customer.co
 import { HeaderComponent } from './layout/header/header.component';
 import { FooterComponent } from './layout/footer/footer.component';
 import { SidebarComponent } from './layout/sidebar/sidebar.component';
+import { HomeComponent } from './layout/home/home.component';
+import { CreateCustomerComponent } from './customer/create-customer/create-customer.component';
 
 @NgModule({
   declarations: [
@@ -13,7 +15,9 @@ import { SidebarComponent } from './layout/sidebar/sidebar.component';
     ListCustomerComponent,
     HeaderComponent,
     FooterComponent,
-    SidebarComponent
+    SidebarComponent,
+    HomeComponent,
+    CreateCustomerComponent
   ],
   imports: [
     BrowserModule
