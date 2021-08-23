@@ -8,6 +8,9 @@ import { FooterComponent } from './layout/footer/footer.component';
 import { SidebarComponent } from './layout/sidebar/sidebar.component';
 import { HomeComponent } from './layout/home/home.component';
 import { CreateCustomerComponent } from './customer/create-customer/create-customer.component';
+import { ListEmployeeComponent } from './employee/list-employee/list-employee.component';
+import { ListServiceComponent } from './service/list-service/list-service.component';
+import { ListCustomerUsingServiceComponent } from './customer/list-customer-using-service/list-customer-using-service.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +20,10 @@ import { CreateCustomerComponent } from './customer/create-customer/create-custo
     FooterComponent,
     SidebarComponent,
     HomeComponent,
-    CreateCustomerComponent
+    CreateCustomerComponent,
+    ListEmployeeComponent,
+    ListServiceComponent,
+    ListCustomerUsingServiceComponent
   ],
   imports: [
     BrowserModule

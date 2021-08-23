@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="43235e75-6ecd-45c2-a5b4-191537c27269" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../../casetudy-module5/src/app/contract-detail/create-contract-detail/create-contract-detail.component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../casetudy-module5/src/app/contract-detail/create-contract-detail/create-contract-detail.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../casetudy-module5/src/app/contract-detail/create-contract-detail/create-contract-detail.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../casetudy-module5/src/app/contract-detail/create-contract-detail/create-contract-detail.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../casetudy-module5/src/app/contract/create-contract/create-contract.component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../casetudy-module5/src/app/contract/create-contract/create-contract.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../casetudy-module5/src/app/contract/create-contract/create-contract.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../casetudy-module5/src/app/contract/create-contract/create-contract.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../casetudy-module5/src/app/customer/edit-customer/edit-customer.component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../casetudy-module5/src/app/customer/edit-customer/edit-customer.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../casetudy-module5/src/app/customer/edit-customer/edit-customer.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../casetudy-module5/src/app/customer/edit-customer/edit-customer.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../casetudy-module5/src/app/employee/create-employee/create-employee.component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../casetudy-module5/src/app/employee/create-employee/create-employee.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../casetudy-module5/src/app/employee/create-employee/create-employee.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../casetudy-module5/src/app/employee/create-employee/create-employee.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../casetudy-module5/src/app/service/create-service/create-service.component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../casetudy-module5/src/app/service/create-service/create-service.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../casetudy-module5/src/app/service/create-service/create-service.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../casetudy-module5/src/app/service/create-service/create-service.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/angular-color-picker-app/.editorconfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/angular-color-picker-app/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/angular-color-picker-app/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/angular-color-picker-app/angular.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/angular-color-picker-app/browserslist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/angular-color-picker-app/e2e/protractor.conf.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/angular-color-picker-app/e2e/src/app.e2e-spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/angular-color-picker-app/e2e/src/app.po.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/angular-color-picker-app/e2e/tsconfig.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/angular-color-picker-app/karma.conf.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/angular-color-picker-app/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/angular-color-picker-app/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/angular-color-picker-app/src/app/app.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/angular-color-picker-app/src/app/app.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/angular-color-picker-app/src/app/app.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/angular-color-picker-app/src/app/app.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/angular-color-picker-app/src/app/app.module.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/angular-color-picker-app/src/app/color/color.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/angular-color-picker-app/src/app/color/color.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/angular-color-picker-app/src/app/color/color.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/angular-color-picker-app/src/app/color/color.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/angular-color-picker-app/src/assets/.gitkeep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/angular-color-picker-app/src/environments/environment.prod.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/angular-color-picker-app/src/environments/environment.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/angular-color-picker-app/src/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/angular-color-picker-app/src/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/angular-color-picker-app/src/main.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/angular-color-picker-app/src/polyfills.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/angular-color-picker-app/src/styles.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/angular-color-picker-app/src/test.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/angular-color-picker-app/tsconfig.app.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/angular-color-picker-app/tsconfig.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/angular-color-picker-app/tsconfig.spec.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/angular-color-picker-app/tslint.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../casetudy-module5/angular.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../casetudy-module5/angular.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../casetudy-module5/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../casetudy-module5/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../casetudy-module5/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../casetudy-module5/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../casetudy-module5/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../casetudy-module5/src/app/app.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../casetudy-module5/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../casetudy-module5/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../casetudy-module5/src/app/customer/create-customer/create-customer.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../casetudy-module5/src/app/customer/create-customer/create-customer.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../casetudy-module5/src/app/customer/list-customer/list-customer.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../casetudy-module5/src/app/customer/list-customer/list-customer.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../casetudy-module5/src/app/layout/header/header.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../casetudy-module5/src/app/layout/header/header.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../casetudy-module5/src/app/layout/home/home.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../casetudy-module5/src/app/layout/home/home.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../casetudy/.editorconfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../casetudy/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../casetudy/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../casetudy/angular.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../casetudy/browserslist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../casetudy/e2e/protractor.conf.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../casetudy/e2e/src/app.e2e-spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../casetudy/e2e/src/app.po.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../casetudy/e2e/tsconfig.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../casetudy/karma.conf.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../casetudy/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../casetudy/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../casetudy/src/app/app.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../casetudy/src/app/app.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../casetudy/src/app/app.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../casetudy/src/app/app.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../casetudy/src/app/app.module.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../casetudy/src/app/contract-detail/create-contract-detail/create-contract-detail.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../casetudy/src/app/contract-detail/create-contract-detail/create-contract-detail.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../casetudy/src/app/contract-detail/create-contract-detail/create-contract-detail.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../casetudy/src/app/contract-detail/create-contract-detail/create-contract-detail.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../casetudy/src/app/contract/create-contract/create-contract.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../casetudy/src/app/contract/create-contract/create-contract.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../casetudy/src/app/contract/create-contract/create-contract.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../casetudy/src/app/contract/create-contract/create-contract.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../casetudy/src/app/customer/create-customer/create-customer.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../casetudy/src/app/customer/create-customer/create-customer.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../casetudy/src/app/customer/create-customer/create-customer.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../casetudy/src/app/customer/create-customer/create-customer.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../casetudy/src/app/customer/edit-customer/edit-customer.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../casetudy/src/app/customer/edit-customer/edit-customer.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../casetudy/src/app/customer/edit-customer/edit-customer.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../casetudy/src/app/customer/edit-customer/edit-customer.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../casetudy/src/app/customer/list-customer/list-customer.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../casetudy/src/app/customer/list-customer/list-customer.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../casetudy/src/app/customer/list-customer/list-customer.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../casetudy/src/app/customer/list-customer/list-customer.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../casetudy/src/app/employee/create-employee/create-employee.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../casetudy/src/app/employee/create-employee/create-employee.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../casetudy/src/app/employee/create-employee/create-employee.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../casetudy/src/app/employee/create-employee/create-employee.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../casetudy/src/app/layout/footer/footer.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../casetudy/src/app/layout/footer/footer.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../casetudy/src/app/layout/footer/footer.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../casetudy/src/app/layout/footer/footer.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../casetudy/src/app/layout/header/header.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../casetudy/src/app/layout/header/header.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../casetudy/src/app/layout/header/header.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../casetudy/src/app/layout/header/header.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../casetudy/src/app/layout/home/home.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../casetudy/src/app/layout/home/home.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../casetudy/src/app/layout/home/home.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../casetudy/src/app/layout/home/home.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../casetudy/src/app/layout/sidebar/sidebar.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../casetudy/src/app/layout/sidebar/sidebar.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../casetudy/src/app/layout/sidebar/sidebar.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../casetudy/src/app/layout/sidebar/sidebar.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../casetudy/src/app/service/create-service/create-service.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../casetudy/src/app/service/create-service/create-service.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../casetudy/src/app/service/create-service/create-service.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../casetudy/src/app/service/create-service/create-service.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../casetudy/src/assets/.gitkeep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../casetudy/src/assets/image/furama.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../casetudy/src/assets/image/furama2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../casetudy/src/assets/image/furama3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../casetudy/src/assets/image/furama4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../casetudy/src/assets/image/furama5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../casetudy/src/assets/image/furama6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../casetudy/src/environments/environment.prod.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../casetudy/src/environments/environment.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../casetudy/src/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../casetudy/src/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../casetudy/src/main.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../casetudy/src/polyfills.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../casetudy/src/styles.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../casetudy/src/test.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../casetudy/tsconfig.app.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../casetudy/tsconfig.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../casetudy/tsconfig.spec.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../casetudy/tslint.json" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectId" id="1x4BQ1rKvmlcwFq3UggQgT9wwEc" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../04-Angular-Component-Template/pratice/angular-hackernews-app" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="43235e75-6ecd-45c2-a5b4-191537c27269" name="Default Changelist" comment="" />
+      <created>1629604460677</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1629604460677</updated>
+      <workItem from="1629604463919" duration="12000" />
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1629604473831">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1629604473831" />
+  </component>
+</project>
