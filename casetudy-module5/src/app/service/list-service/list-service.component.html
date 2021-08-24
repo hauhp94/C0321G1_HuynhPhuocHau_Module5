@@ -5,50 +5,29 @@
     <th>STT</th>
     <th>ID</th>
     <th>Name service</th>
-    <th>Code</th>
     <th>Area</th>
-    <th>Max people</th>
-    <th>Rent type</th>
-    <th>Service type</th>
-    <th>Standard room</th>
-    <th>Position</th>
-    <th>Description Other Convenience</th>
-    <th>Pool Area</th>
-    <th>User Name</th>
     <th>Number of floors</th>
-    <th>Free Service</th>
+    <th>Max people</th>
+    <th>Cost</th>
+    <th>Rent type</th>
+    <th>Status</th>
     <th>Edit</th>
     <th>Delete</th>
   </tr>
   </thead>
   <tbody>
-  <tr>
+  <tr *ngFor="let service of serviceList;index as i">
+    <td>{{i + 1}}</td>
+    <td>{{service.idService}}</td>
+    <td>{{service.nameService}}</td>
+    <td>{{service.areaService}}</td>
+    <td>{{service.numberOfFloors}}</td>
+    <td>{{service.maxPeople}}</td>
+    <td>{{service.cost | currency:'VND'}}</td>
+    <td>{{service.idRentType}}</td>
+    <td>{{service.statusService}}</td>
     <td></td>
     <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td>
-      <a class=" btn btn-warning">
-        <i class="fas fa-user-edit " title="Edit"></i>
-      </a>
-    </td>
-    <td>
-      <button type="button" class="deleteCustomer btn btn-danger"
-              data-toggle="modal" data-target="#exampleModal">
-        <i class="fas fa-trash-alt " title="Delete"></i>
-      </button>
-    </td>
   </tr>
   </tbody>
 </table>

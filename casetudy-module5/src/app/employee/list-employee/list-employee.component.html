@@ -1,7 +1,6 @@
 <table class="table table-striped table-bordered align-content-center d-inline-block w-100  table-bordered"
        style="overflow-x: scroll" id="tableCustomer">
   <h2>List employee</h2>
-
   <thead class="thead-dark">
   <tr>
     <th>STT</th>
@@ -16,38 +15,27 @@
     <th>Position</th>
     <th>Education Degree</th>
     <th>Division</th>
-    <th>User Name</th>
     <th>Edit</th>
     <th>Delete</th>
   </tr>
   </thead>
   <tbody>
-  <tr>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-
-    <td>
-      <a class=" btn btn-warning">
-        <i class="fas fa-user-edit " title="Edit"></i>
-      </a>
+  <tr *ngFor="let employee of employeeList;index as i">
+    <td>{{i + 1}}</td>
+    <td>{{employee.idEmployee}}</td>
+    <td>{{employee.nameEmployee | titlecase}}</td>
+    <td>{{employee.dateOfBirthEmployee | date}}</td>
+    <td>{{employee.idCardEmployee}}</td>
+    <td>{{employee.salaryEmployee | currency:'VND'}}
     </td>
-    <td>
-      <button type="button" class="deleteCustomer btn btn-danger"
-              data-toggle="modal" data-target="#exampleModal">
-        <i class="fas fa-trash-alt " title="Delete"></i>
-      </button>
-    </td>
+    <td>{{employee.phoneEmployee}}</td>
+    <td>{{employee.emailEmployee}}</td>
+    <td>{{employee.addressEmployee}}</td>
+    <td>{{employee.idPosition}}</td>
+    <td>{{employee.idEducation}}</td>
+    <td>{{employee.idDivision}}</td>
+    <td></td>
+    <td></td>
   </tr>
   </tbody>
 </table>

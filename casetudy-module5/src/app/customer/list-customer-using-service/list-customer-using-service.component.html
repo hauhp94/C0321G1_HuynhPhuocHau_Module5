@@ -6,54 +6,30 @@
   <tr>
     <th>STT</th>
     <th>ID contract</th>
-    <th>End date</th>
-    <th>Name customer</th>
-    <th>Code customer</th>
-    <th>Gender</th>
-    <th>Service ID</th>
-    <th>Service name</th>
-    <th>Attach service name</th>
-    <th>Total money (USD)</th>
-    <th>Add attach service</th>
+    <th>ID employee</th>
+    <th>ID customer</th>
+    <th>ID service</th>
+    <th>Date start</th>
+    <th>Date end</th>
+    <th>Deposite</th>
+    <th>Total money</th>
     <th>Edit</th>
     <th>Delete</th>
   </tr>
   </thead>
   <tbody>
-  <tr>
+  <tr *ngFor="let contract of contractList;index as i">
+    <td>{{i + 1}}</td>
+    <td>{{contract.idContract}}</td>
+    <td>{{contract.idEmployee}}</td>
+    <td>{{contract.idCustomer}}</td>
+    <td>{{contract.idService}}</td>
+    <td>{{contract.dateStart}}</td>
+    <td>{{contract.dateEnd}}</td>
+    <td>{{contract.deposit | currency:'VND'}}</td>
+    <td>{{contract.totalMoney | currency:'VND'}}</td>
     <td></td>
     <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td>
-      <span>Female</span>
-      <span>Male</span>
-    </td>
-    <td></td>
-    <td></td>
-    <td>
-      <span></span>
-    </td>
-    <td></td>
-    <td>
-      <a
-        type="button" class=" btn btn-warning">
-        Add
-      </a>
-    </td>
-    <td>
-      <a
-        type="button" class=" btn btn-warning">
-        Edit
-      </a>
-    </td>
-    <td>
-      <button type="button" class="deleteCustomer btn-danger btn"
-              data-toggle="modal" data-target="#exampleModal">
-        <i class="fas fa-trash-alt " title="Delete"></i>
-      </button>
-    </td>
   </tr>
   </tbody>
 </table>
