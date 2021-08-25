@@ -1,0 +1,108 @@
+<form [formGroup]="contactForm" (ngSubmit)="onSubmit()" novalidate>
+
+  <p>
+    <label for="email">Email </label>
+    <input type="email" id="email" name="email" formControlName="email">
+    <small style="color: red"
+           *ngIf="contactForm.controls.email.hasError('required') &&
+           contactForm.controls.email.dirty">
+      email required
+    </small>
+    <small style="color: red"
+           *ngIf="contactForm.controls.email.hasError('email') &&
+           contactForm.controls.email.dirty">
+      email invalid
+    </small>
+  </p>
+  <p>
+    <label for="country">Country </label>
+    <select id="country" name="country" formControlName="country">
+      <option *ngFor="let c of countryList" [value]="c" [textContent]="c">
+      </option>
+    </select>
+    <small style="color: red"
+           *ngIf="contactForm.controls.country.hasError('required') &&
+           contactForm.controls.country.dirty">
+      country required
+    </small>
+  </p>
+  <p>
+    <label for="age">Age </label>
+    <input type="number" id="age" name="age" formControlName="age">
+    <small style="color: red"
+           *ngIf="contactForm.controls.age.hasError('required') &&
+           contactForm.controls.age.dirty">
+      age required
+    </small>
+    <small style="color: red"
+           *ngIf="contactForm.controls.age.hasError('min') &&
+           contactForm.controls.age.dirty">
+      age 18+
+    </small>
+  </p>
+  <p>
+    <label>Gender </label>
+    <input type="radio" value="male"  name="gender" formControlName="gender" id="male"> <label for="male">Male</label>
+    <input type="radio" value="female"  name="gender" formControlName="gender" id="female"> <label for="female">Female</label>
+    <small style="color: red"
+           *ngIf="contactForm.controls.gender.hasError('required') &&
+           contactForm.controls.gender.dirty">
+      age 18+
+    </small>
+  </p>
+  <p>
+    <label for="phone">Phone </label>
+    <input type="text" id="phone" name="phone" formControlName="phone">
+    <small style="color: red"
+           *ngIf="contactForm.controls.phone.hasError('required') &&
+           contactForm.controls.phone.dirty">
+      phone required
+    </small>
+    <small style="color: red"
+           *ngIf="contactForm.controls.phone.hasError('pattern') &&
+           contactForm.controls.phone.dirty">
+      phone invalid
+    </small>
+  </p>
+  <div formGroupName="pswGroup">
+    <p>
+      <label for="password">Password </label>
+      <input type="password" id="password" name="password" formControlName="password">
+            <small style="color: red"
+                   *ngIf="contactForm.controls.pswGroup.get('password').hasError('required') &&
+                 contactForm.controls.pswGroup.dirty">
+              password required
+            </small>
+            <small style="color: red"
+                   *ngIf="contactForm.controls.pswGroup.get('password').hasError('minlength') &&
+                 contactForm.controls.pswGroup.dirty">
+              password min length 6
+            </small>
+    </p>
+
+    <p>
+      <label for="confirmPassword">Confirm Password </label>
+      <input type="password" id="confirmPassword" name="confirmPassword" formControlName="confirmPassword">
+            <small style="color: red"
+                   *ngIf="contactForm.controls.pswGroup.get('confirmPassword').hasError('required') &&
+                 contactForm.controls.pswGroup.dirty">
+              confirmPassword required
+            </small>
+            <small style="color: red"
+                   *ngIf="contactForm.controls.pswGroup.get('confirmPassword').hasError('minlength') &&
+                 contactForm.controls.pswGroup.dirty">
+              confirmPassword min length 6
+            </small>
+      <small style="color: red"
+             *ngIf="contactForm.hasError('passwordnotmatch',['pswGroup']) &&
+                   contactForm.dirty">
+        Password does not match
+      </small>
+    </p>
+  </div>
+
+  <p>
+    <button type="submit" [disabled]="contactForm.invalid">Submit</button>
+  </p>
+
+</form>
