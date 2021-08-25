@@ -11,23 +11,32 @@ import { CreateCustomerComponent } from './customer/create-customer/create-custo
 import { ListEmployeeComponent } from './employee/list-employee/list-employee.component';
 import { ListServiceComponent } from './service/list-service/list-service.component';
 import { ListCustomerUsingServiceComponent } from './customer/list-customer-using-service/list-customer-using-service.component';
+import {ReactiveFormsModule} from '@angular/forms';
+import {CreateEmployeeComponent} from './employee/create-employee/create-employee.component';
+import {CreateServiceComponent} from './service/create-service/create-service.component';
+import {CreateContractComponent} from './contract/create-contract/create-contract.component';
+
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    ListCustomerComponent,
-    HeaderComponent,
-    FooterComponent,
-    SidebarComponent,
-    HomeComponent,
-    CreateCustomerComponent,
-    ListEmployeeComponent,
-    ListServiceComponent,
-    ListCustomerUsingServiceComponent
-  ],
-  imports: [
-    BrowserModule
-  ],
+    declarations: [
+        AppComponent,
+        ListCustomerComponent,
+        HeaderComponent,
+        FooterComponent,
+        SidebarComponent,
+        HomeComponent,
+        CreateCustomerComponent,
+        ListEmployeeComponent,
+        ListServiceComponent,
+        ListCustomerUsingServiceComponent,
+        CreateEmployeeComponent,
+        CreateServiceComponent,
+        CreateContractComponent
+    ],
+    imports: [
+        BrowserModule,
+        ReactiveFormsModule
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })

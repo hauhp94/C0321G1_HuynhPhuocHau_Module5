@@ -1,19 +1,38 @@
-<table class="table table-striped border-dark table-bordered">
+<form [formGroup]="createContractForm" (ngSubmit)="onSubmit()">
+  <table class="table table-striped border-dark table-bordered">
   <h2>Add new contract</h2>
-
+    <tr>
+      <td>Id hợp đồng:</td>
+      <td>
+        <input type="text" class="form-control" formControlName="idContract">
+        <small style="color: red" *ngIf="createContractForm.controls.idContract.hasError('required') &&
+           createContractForm.controls.idContract.touched">required
+        </small>
+      </td>
+    </tr>
   <tr>
     <td>Ngày bắt đầu:</td>
-    <td><input type="date"  class="form-control">
+    <td>
+      <input type="date" class="form-control" formControlName="dateStart">
+      <small style="color: red" *ngIf="createContractForm.controls.dateStart.hasError('required') &&
+           createContractForm.controls.dateStart.touched">required
+      </small>
     </td>
   </tr>
   <tr>
     <td>Ngày kết thúc:</td>
-    <td><input type="date" class="form-control">
+    <td><input type="date" class="form-control" formControlName="dateEnd">
+      <small style="color: red" *ngIf="createContractForm.controls.dateEnd.hasError('required') &&
+           createContractForm.controls.dateEnd.touched">required
+      </small>
     </td>
   </tr>
   <tr>
     <td>Tiền đặt cọc:</td>
-    <td><input type="number" step="any" class="form-control">
+    <td><input type="number" step="any" class="form-control" formControlName="deposit">
+      <small style="color: red" *ngIf="createContractForm.controls.deposit.hasError('required') &&
+           createContractForm.controls.deposit.touched">required
+      </small>
     </td>
   </tr>
 
@@ -21,37 +40,42 @@
     <td>Tổng tiền:</td>
     <td>
       <input id="totalMoney" type="number" step="any"
-             class="form-control" readonly>
+             class="form-control" formControlName="totalMoney">
+      <small style="color: red" *ngIf="createContractForm.controls.totalMoney.hasError('required') &&
+           createContractForm.controls.totalMoney.touched">required
+      </small>
     </td>
   </tr>
   <tr>
     <td>Nhân viên làm hợp đồng:</td>
     <td>
-      <select class="form-control">
-        <option></option>
+      <select class="form-control" formControlName="idEmployee">
+        <option *ngFor="let c of employeeList" [value]="c.idEmployee" [textContent]="c.nameEmployee"></option>
       </select>
     </td>
   </tr>
   <tr>
     <td>Khách hàng:</td>
     <td>
-      <select class="form-control">
-        <option></option>
+      <select class="form-control" formControlName="idCustomer">
+        <option *ngFor="let c of customerList" [value]="c.idCustomer" [textContent]="c.nameCustomer"></option>
       </select>
     </td>
   </tr>
   <tr>
     <td>Dịch vụ:</td>
     <td>
-      <select  class="form-control" onchange="setTotalMoney()" id="mySelect">
-        <option></option>
+      <select  class="form-control"
+               formControlName="idService">
+        <option *ngFor="let c of serviceList" [value]="c.idService" [textContent]="c.nameService"></option>
       </select>
     </td>
   </tr>
   <tr>
     <td colspan="2">
-      <button class="btn btn-success" type="submit">Save</button>
+      <button class="btn btn-success" type="submit" [disabled]="createContractForm.invalid">Save</button>
       <button class="btn btn-secondary" type="reset">Reset</button>
     </td>
   </tr>
 </table>
+</form>

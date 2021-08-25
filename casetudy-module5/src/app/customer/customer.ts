@@ -7,6 +7,7 @@ export interface Customer {
   phoneCustomer: string;
   emailCustomer: string;
   addressCustomer: string;
+  codeCustomer: string;
 }
 
 

@@ -1,92 +1,134 @@
+<!--nội dung-->
+<div class="align-content-center">
+  <h2>Add new employee</h2>
+  <form [formGroup]="createEmployeeForm" (ngSubmit)="onSubmit()">
+  <table class="table table-striped border-dark table-bordered">
+    <tr>
+      <td>ID nhân viên:</td>
+      <td><input type="number" class="form-control" formControlName="idEmployee">
+        <small style="color: red" *ngIf="createEmployeeForm.controls.idEmployee.hasError('required') &&
+           createEmployeeForm.controls.idEmployee.touched">required
+        </small>
+      </td>
+    </tr>
+    <tr>
+      <td>Tên nhân viên:</td>
+      <td><input type="text" class="form-control" formControlName="nameEmployee">
+        <small style="color: red" *ngIf="createEmployeeForm.controls.nameEmployee.hasError('required') &&
+           createEmployeeForm.controls.nameEmployee.touched">required
+        </small>
+      </td>
+    </tr>
+    <tr>
+      <td>Ngày sinh:</td>
+      <td><input type="date"
+                 min="1920-01-01" max="2030-12-31" class="form-control"
+                 formControlName="dateOfBirthEmployee">
+        <small style="color: red" *ngIf="createEmployeeForm.controls.dateOfBirthEmployee.hasError('required') &&
+           createEmployeeForm.controls.dateOfBirthEmployee.touched">required
+        </small>
+      </td>
+    </tr>
 
-    <!--nội dung-->
-    <div class="align-content-center">
-      <h2>Add new employee</h2>
-        <table class="table table-striped border-dark table-bordered">
-          <tr>
-            <td>Tên nhân viên:</td>
-            <td><input type="text"  class="form-control">
-
-          </tr>
-          <tr>
-            <td>Ngày sinh:</td>
-            <td><input type="date"
-                       min="1920-01-01" max="2030-12-31"   class="form-control">
-
-          </tr>
-
-          <tr>
-            <td>Số CMND:</td>
-            <td>
-              <input type="text"  class="form-control">
-
-            </td>
-          </tr>
-          <tr>
-            <td>Mức lương:</td>
-            <td>
-              <input type="number" step="any"   class="form-control">
-
-            </td>
-          </tr>
-          <tr>
-            <td>Số điện thoại:</td>
-            <td>
-              <input type="text"  class="form-control">
-
-            </td>
-          </tr>
-          <tr>
-            <td>Email:</td>
-            <td>
-              <input type="text"   class="form-control">
-
-            </td>
-          </tr>
-          <tr>
-            <td>Địa chỉ:</td>
-            <td><input type="text"   class="form-control">
-
-          </tr>
-          <tr>
-            <td><label for="viTri">Vị trí:</label></td>
-            <td>
-              <select class="form-control" id="viTri">
-                <option></option>
-              </select>
-            </td>
-
-          </tr>
-          <tr>
-            <td><label for="trinhDo">Trình độ:</label></td>
-            <td>
-              <select  class="form-control" id="trinhDo">
-                <option ></option>
-              </select>
-            </td>
-          </tr>
-          <tr>
-            <td><label for="boPhan">Bộ phận:</label></td>
-            <td>
-              <select class="form-control" id="boPhan">
-                <option></option>
-              </select>
-            </td>
-          </tr>
-          <tr>
-            <td>Username:</td>
-            <td>
-              <select class="form-control" >
-                <option></option>
-              </select>
-            </td>
-          </tr>
-          <tr>
-            <td colspan="2">
-              <button type="submit" class="btn btn-success">Save</button>
-            </td>
-          </tr>
-        </table>
-<!--      </form>-->
-    </div>
+    <tr>
+      <td>Số CMND:</td>
+      <td>
+        <input type="text" class="form-control" formControlName="idCardEmployee">
+        <small style="color: red" *ngIf="createEmployeeForm.controls.idCardEmployee.hasError('required') &&
+           createEmployeeForm.controls.idCardEmployee.touched">required
+        </small>
+      </td>
+    </tr>
+    <tr>
+      <td>Mức lương:</td>
+      <td>
+        <input type="number" step="any" class="form-control"
+               formControlName="salaryEmployee">
+        <small style="color: red" *ngIf="createEmployeeForm.controls.salaryEmployee.hasError('required') &&
+           createEmployeeForm.controls.salaryEmployee.touched">required
+        </small>
+      </td>
+    </tr>
+    <tr>
+      <td>Số điện thoại:</td>
+      <td>
+        <input type="text" class="form-control" formControlName="phoneEmployee">
+        <small style="color: red" *ngIf="createEmployeeForm.controls.phoneEmployee.hasError('required') &&
+           createEmployeeForm.controls.phoneEmployee.touched">required
+        </small>
+        <small style="color: red" *ngIf="createEmployeeForm.controls.phoneEmployee.hasError('pattern') &&
+           createEmployeeForm.controls.phoneEmployee.touched">invalid ex: 0901123123
+        </small>
+      </td>
+    </tr>
+    <tr>
+      <td>Email:</td>
+      <td>
+        <input type="text" class="form-control" formControlName="emailEmployee">
+        <small style="color: red" *ngIf="createEmployeeForm.controls.emailEmployee.hasError('required') &&
+           createEmployeeForm.controls.emailEmployee.touched">required
+        </small>
+      </td>
+    </tr>
+    <tr>
+      <td>Địa chỉ:</td>
+      <td><input type="text" class="form-control" formControlName="addressEmployee">
+        <small style="color: red" *ngIf="createEmployeeForm.controls.addressEmployee.hasError('required') &&
+           createEmployeeForm.controls.addressEmployee.touched">required
+        </small>
+      </td>
+    </tr>
+    <tr>
+      <td><label for="viTri">Vị trí:</label></td>
+      <td>
+        <select class="form-control" id="viTri" formControlName="idPosition">
+          <option *ngFor="let c of positionList" [value]="c" [textContent]="c"></option>
+        </select>
+        <small style="color: red" *ngIf="createEmployeeForm.controls.idPosition.hasError('required') &&
+           createEmployeeForm.controls.idPosition.touched">required
+        </small>
+      </td>
+    </tr>
+    <tr>
+      <td><label for="trinhDo">Trình độ:</label></td>
+      <td>
+        <select class="form-control" id="trinhDo" formControlName="idEducation">
+          <option *ngFor="let c of educationList" [value]="c" [textContent]="c"></option>
+        </select>
+        <small style="color: red" *ngIf="createEmployeeForm.controls.idEducation.hasError('required') &&
+           createEmployeeForm.controls.idEducation.touched">required
+        </small>
+      </td>
+    </tr>
+    <tr>
+      <td><label for="boPhan">Bộ phận:</label></td>
+      <td>
+        <select class="form-control" id="boPhan" formControlName="idDivision">
+          <option *ngFor="let c of divisionList" [value]="c" [textContent]="c"></option>
+        </select>
+        <small style="color: red" *ngIf="createEmployeeForm.controls.idDivision.hasError('required') &&
+           createEmployeeForm.controls.idDivision.touched">required
+        </small>
+      </td>
+    </tr>
+    <tr>
+      <td>Code:</td>
+      <td>
+        <input type="text" class="form-control" formControlName="codeEmployee">
+        <small style="color: red" *ngIf="createEmployeeForm.controls.codeEmployee.hasError('required') &&
+           createEmployeeForm.controls.codeEmployee.touched">required
+        </small>
+        <small style="color: red" *ngIf="createEmployeeForm.controls.codeEmployee.hasError('pattern') &&
+           createEmployeeForm.controls.codeEmployee.touched">invalid NV-1234
+        </small>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2">
+        <button type="submit" class="btn btn-success" [disabled]="createEmployeeForm.invalid">Save</button>
+      </td>
+    </tr>
+  </table>
+  </form>
+</div>
 

@@ -10,4 +10,5 @@ export interface Employee {
   phoneEmployee: string;
   emailEmployee: string;
   addressEmployee: string;
+  codeEmployee: string;
 }

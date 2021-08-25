@@ -7,4 +7,5 @@ export interface Service {
   cost: number;
   idRentType: number;
   statusService: string;
+  codeService: string;
 }

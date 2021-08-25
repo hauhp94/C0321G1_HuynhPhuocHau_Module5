@@ -1,83 +1,96 @@
 <h2>Create Service</h2>
+<form [formGroup]="createServiceForm" (ngSubmit)="onSubmit()">
+
 <table class="table table-striped border-dark table-bordered">
+  <tr>
+    <td>Id dịch vụ:</td>
+    <td>
+      <input type="number" class="form-control" formControlName="idService">
+      <small style="color: red" *ngIf="createServiceForm.controls.idService.hasError('required') &&
+           createServiceForm.controls.idService.touched">required
+      </small>
+    </td>
+  </tr>
   <tr>
     <td>Tên dịch vụ:</td>
     <td>
-      <input type="text" class="form-control">
+      <input type="text" class="form-control" formControlName="nameService">
+      <small style="color: red" *ngIf="createServiceForm.controls.nameService.hasError('required') &&
+           createServiceForm.controls.nameService.touched">required
+      </small>
     </td>
   </tr>
   <tr>
     <td>Mã dịch vụ:</td>
-    <td><input type="text" class="form-control">
-
+    <td><input type="text" class="form-control" formControlName="codeService">
+      <small style="color: red" *ngIf="createServiceForm.controls.codeService.hasError('required') &&
+           createServiceForm.controls.codeService.touched">required
+      </small>
+      <small style="color: red" *ngIf="createServiceForm.controls.codeService.hasError('pattern') &&
+           createServiceForm.controls.codeService.touched">code invalid ex DV-1234
+      </small>
     </td>
   </tr>
   <tr>
     <td>Diện tích sử dụng:</td>
-    <td><input type="number" class="form-control">
+    <td><input type="number" class="form-control" formControlName="areaService">
+      <small style="color: red" *ngIf="createServiceForm.controls.areaService.hasError('required') &&
+           createServiceForm.controls.areaService.touched">required
+      </small>
     </td>
   </tr>
 
   <tr>
     <td>Chi phí thuê:</td>
-    <td><input type="number" step="any" class="form-control">
+    <td><input type="number" step="any" class="form-control" formControlName="cost">
+      <small style="color: red" *ngIf="createServiceForm.controls.cost.hasError('required') &&
+           createServiceForm.controls.cost.touched">required
+      </small>
+      <small style="color: red" *ngIf="createServiceForm.controls.cost.hasError('min') &&
+           createServiceForm.controls.cost.touched"> cost >500000
+      </small>
     </td>
   </tr>
   <tr>
     <td>Số người tối đa:</td>
-    <td><input type="number" class="form-control">
-
+    <td><input type="number" class="form-control" formControlName="maxPeople">
+      <small style="color: red" *ngIf="createServiceForm.controls.maxPeople.hasError('required') &&
+           createServiceForm.controls.maxPeople.touched">required
+      </small>
     </td>
   </tr>
   <tr>
     <td>Kiểu thuê:</td>
     <td>
-      <select class="form-control">
-        <option></option>
+      <select class="form-control" formControlName="idRentType">
+        <option *ngFor="let c of rentTypeList" [value]="c" [textContent]="c"></option>
       </select>
+      <small style="color: red" *ngIf="createServiceForm.controls.idRentType.hasError('required') &&
+           createServiceForm.controls.idRentType.touched">required
+      </small>
     </td>
   </tr>
   <tr>
-    <td>Loại dịch vụ:</td>
-    <td>
-      <select class="form-control">
-        <option></option>
-      </select>
+    <td>Trạng thái:</td>
+    <td><input type="text" class="form-control" formControlName="statusService">
+      <small style="color: red" *ngIf="createServiceForm.controls.statusService.hasError('required') &&
+           createServiceForm.controls.statusService.touched">required
+      </small>
     </td>
   </tr>
-  <tr>
-    <td>Tiêu chuẩn phòng:</td>
-    <td><input type="text" class="form-control">
 
-
-    </td>
-  </tr>
-  <tr>
-    <td>Tiện nghi khác:</td>
-    <td>
-      <input type="text" class="form-control">
-
-    </td>
-  </tr>
-  <tr>
-    <td>Diện tích hồ bơi:</td>
-    <td><input type="number" step="any" class="form-control">
-
-    </td>
-  </tr>
   <tr>
     <td>Số tầng:</td>
-    <td><input type="number" step="any" class="form-control">
-    </td>
-  </tr>
-  <tr>
-    <td>Dịch vụ miễn phí đi kèm:</td>
-    <td><input type="text" class="form-control">
+    <td><input type="number" step="any" class="form-control" formControlName="numberOfFloors">
+      <small style="color: red" *ngIf="createServiceForm.controls.numberOfFloors.hasError('required') &&
+           createServiceForm.controls.numberOfFloors.touched">required
+      </small>
     </td>
   </tr>
   <tr>
     <td colspan="2">
-      <button class="btn btn-success" type="submit">Create</button>
+      <button class="btn btn-success" type="submit" [disabled]="createServiceForm.invalid">Create</button>
     </td>
   </tr>
 </table>
+</form>
