@@ -42,8 +42,7 @@ export class EditCustomerComponent implements OnInit {
 
   onSubmitUpdate(id: number) {
     const customer = this.editCustomerForm.value;
-    this.customerServiceService.updateProduct(id, customer);
-    alert('Cập nhật thành công');
+    this.customerServiceService.updateCustomer(id, customer);
     this.customerServiceService.message = 'update ok';
     this.router.navigateByUrl('customer/list');
   }

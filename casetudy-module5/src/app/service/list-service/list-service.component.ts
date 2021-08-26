@@ -9,9 +9,11 @@ import {ServiceServiceService} from '../service-service.service';
 })
 export class ListServiceComponent implements OnInit {
   serviceList: Service[];
+  message: string;
 
   constructor(private serviceServiceService: ServiceServiceService) {
     this.serviceList = serviceServiceService.serviceList;
+    this.message = this.serviceServiceService.message;
   }
 
   ngOnInit(): void {

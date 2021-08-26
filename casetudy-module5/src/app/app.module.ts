@@ -18,6 +18,8 @@ import {CreateContractComponent} from './contract/create-contract/create-contrac
 import {EditCustomerComponent} from './customer/edit-customer/edit-customer.component';
 import {Router, RouterModule} from '@angular/router';
 import {FuramaRoutingModule} from './furama-routing.module';
+import { EditEmployeComponent } from './employee/edit-employe/edit-employe.component';
+import { EditServiceComponent } from './service/edit-service/edit-service.component';
 
 
 @NgModule({
@@ -35,7 +37,9 @@ import {FuramaRoutingModule} from './furama-routing.module';
         CreateEmployeeComponent,
         CreateServiceComponent,
         CreateContractComponent,
-        EditCustomerComponent
+        EditCustomerComponent,
+        EditEmployeComponent,
+        EditServiceComponent
     ],
   imports: [
     BrowserModule,

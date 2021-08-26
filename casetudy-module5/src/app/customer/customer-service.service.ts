@@ -32,7 +32,7 @@ export class CustomerServiceService {
     console.log('id in service: ' + id);
   }
 
-  updateProduct(id: number, customer: any) {
+  updateCustomer(id: number, customer: any) {
     for (let i = 0; i < this.customerList.length; i++) {
       if (this.customerList[i].customerId === id) {
         this.customerList[i] = customer;

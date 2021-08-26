@@ -8,10 +8,12 @@ import {EmployeeServiceService} from '../employee-service.service';
   styleUrls: ['./list-employee.component.css']
 })
 export class ListEmployeeComponent implements OnInit {
+  message: string;
   employeeList: Employee[];
 
   constructor(private employeeServiceService: EmployeeServiceService) {
    this.employeeList = employeeServiceService.employeeList;
+   this.message = this.employeeServiceService.message;
   }
 
   ngOnInit(): void {

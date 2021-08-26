@@ -26,7 +26,20 @@ export class ServiceServiceService {
     statusService: 'avaiable',
     codeService: 'DV-5342'
   }];
+  message: string;
 
   constructor() {
+  }
+
+  updateService(id: number, service: any) {
+    for (let i = 0; i < this.serviceList.length; i++) {
+      if (this.serviceList[i].idService === id) {
+        this.serviceList[i] = service;
+      }
+    }
+  }
+
+  findById(id: number) {
+    return this.serviceList.find(service => service.idService === id);
   }
 }
