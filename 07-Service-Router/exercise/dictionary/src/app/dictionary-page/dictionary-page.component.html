@@ -1,0 +1,18 @@
+<h2>List word</h2>
+<table border="1">
+  <tr>
+    <th>No</th>
+    <th>word</th>
+    <th>mean</th>
+    <th>action</th>
+  </tr>
+  <tr *ngFor="let word of wordList;index as i">
+    <td>{{i + 1}}</td>
+    <td>{{word.word}}</td>
+    <td>{{word.mean}}</td>
+    <td>
+      <a [routerLink]="['/word-detail', word.word]">Detail</a>
+    </td>
+
+  </tr>
+</table>

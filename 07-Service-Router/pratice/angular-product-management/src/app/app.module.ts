@@ -3,19 +3,25 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { YoutubePlaylistComponent } from './youtube-playlist/youtube-playlist.component';
-import { YoutubePlayerComponent } from './youtube-player/youtube-player.component';
+import { ProductListComponent } from './product/product-list/product-list.component';
+import { ProductCreateComponent } from './product/product-create/product-create.component';
+import {ReactiveFormsModule} from '@angular/forms';
+import { ProductUpdateComponent } from './product-update/product-update.component';
+import { ProductDeleteComponent } from './product-delete/product-delete.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    YoutubePlaylistComponent,
-    YoutubePlayerComponent
+    ProductListComponent,
+    ProductCreateComponent,
+    ProductUpdateComponent,
+    ProductDeleteComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        ReactiveFormsModule
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })

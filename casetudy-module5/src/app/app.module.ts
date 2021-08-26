@@ -15,6 +15,9 @@ import {ReactiveFormsModule} from '@angular/forms';
 import {CreateEmployeeComponent} from './employee/create-employee/create-employee.component';
 import {CreateServiceComponent} from './service/create-service/create-service.component';
 import {CreateContractComponent} from './contract/create-contract/create-contract.component';
+import {EditCustomerComponent} from './customer/edit-customer/edit-customer.component';
+import {Router, RouterModule} from '@angular/router';
+import {FuramaRoutingModule} from './furama-routing.module';
 
 
 @NgModule({
@@ -31,12 +34,15 @@ import {CreateContractComponent} from './contract/create-contract/create-contrac
         ListCustomerUsingServiceComponent,
         CreateEmployeeComponent,
         CreateServiceComponent,
-        CreateContractComponent
+        CreateContractComponent,
+        EditCustomerComponent
     ],
-    imports: [
-        BrowserModule,
-        ReactiveFormsModule
-    ],
+  imports: [
+    BrowserModule,
+    ReactiveFormsModule,
+    RouterModule,
+    FuramaRoutingModule
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })

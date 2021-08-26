@@ -1,17 +1,28 @@
-import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
-import {YoutubePlaylistComponent} from './youtube-playlist/youtube-playlist.component';
-import {YoutubePlayerComponent} from './youtube-player/youtube-player.component';
+import {NgModule} from '@angular/core';
+import {Routes, RouterModule} from '@angular/router';
+import {ProductListComponent} from './product/product-list/product-list.component';
+import {ProductCreateComponent} from './product/product-create/product-create.component';
+import {ProductUpdateComponent} from './product-update/product-update.component';
+import {ProductDeleteComponent} from './product-delete/product-delete.component';
 
 
 const routes: Routes = [
   {
-    path: 'youtube',
-    component: YoutubePlaylistComponent,
-    children: [{
-      path: ':id',
-      component: YoutubePlayerComponent
-    }]
+    path: '',
+    component: ProductListComponent
+  },
+  {
+    path: 'product/list',
+    component: ProductListComponent
+  }, {
+    path: 'product/create',
+    component: ProductCreateComponent
+  }, {
+    path: 'product/edit/:id',
+    component: ProductUpdateComponent
+  }, {
+    path: 'product/delete/:id',
+    component: ProductDeleteComponent
   }
 ];
 
@@ -19,4 +30,5 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {
+}
