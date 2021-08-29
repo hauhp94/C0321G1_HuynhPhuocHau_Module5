@@ -6,10 +6,10 @@
       <tr>
         <td>ID:</td>
         <td>
-          <input type="text" class="form-control" formControlName="customerId"
-                 [ngClass]="createCustomerForm.controls.customerId.valid? 'is-valid':'is-invalid'">
-          <small style="color: red" *ngIf="createCustomerForm.controls.customerId.hasError('required') &&
-           createCustomerForm.controls.customerId.touched">id required
+          <input type="text" class="form-control" formControlName="id"
+                 [ngClass]="createCustomerForm.controls.id.valid? 'is-valid':'is-invalid'">
+          <small style="color: red" *ngIf="createCustomerForm.controls.id.hasError('required') &&
+           createCustomerForm.controls.id.touched">id required
           </small>
         </td>
       </tr>

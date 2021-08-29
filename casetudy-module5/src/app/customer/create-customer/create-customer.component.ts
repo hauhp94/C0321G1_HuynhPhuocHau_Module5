@@ -1,5 +1,10 @@
 import {Component, OnInit} from '@angular/core';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
+import {Customer} from '../customer';
+import {CustomerServiceService} from '../customer-service.service';
+import {Router} from '@angular/router';
+import {MatSnackBar} from '@angular/material/snack-bar';
+
 
 @Component({
   selector: 'app-create-customer',
@@ -8,7 +13,7 @@ import {FormControl, FormGroup, Validators} from '@angular/forms';
 })
 export class CreateCustomerComponent implements OnInit {
   createCustomerForm = new FormGroup({
-    customerId: new FormControl('', Validators.required ),
+    id: new FormControl('', Validators.required),
     typeCustomerId: new FormControl('', Validators.required),
     nameCustomer: new FormControl('', Validators.required),
     dateOfBirthCustomer: new FormControl('', Validators.required),
@@ -19,13 +24,21 @@ export class CreateCustomerComponent implements OnInit {
     codeCustomer: new FormControl('', [Validators.required, Validators.pattern('KH-\\d{4}')])
   });
 
-  constructor() {
+  constructor(private customerServiceService: CustomerServiceService,
+              private router: Router,
+              private snackBar: MatSnackBar
+  ) {
   }
 
   ngOnInit(): void {
   }
 
   onSubmit() {
-    console.log(this.createCustomerForm.value);
+    const customer = this.createCustomerForm.value;
+    console.log('VALUE: ' + this.createCustomerForm.value);
+    this.customerServiceService.createCustomer(customer).subscribe(value =>
+      this.router.navigateByUrl(''));
+    this.customerServiceService.message = 'create ok';
+    this.snackBar.open('create ok ', 'ok');
   }
 }

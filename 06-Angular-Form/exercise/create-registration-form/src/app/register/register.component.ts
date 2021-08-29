@@ -29,10 +29,11 @@ export class RegisterComponent implements OnInit {
 
   onSubmit() {
     console.log(this.contactForm.value);
+    console.log(this.contactForm.value.phone);
   }
 
   conparePassword(c: AbstractControl): any {
     const v = c.value;
-    return v.password === v.confirmPassword ? null : {passwordnotmatch: true };
+    return v.password === v.confirmPassword ? null : {passwordnotmatch: true};
   }
 }

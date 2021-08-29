@@ -1,15 +1,15 @@
 <!--nội dung-->
 <div class="align-content-center">
   <h2>Update new customer</h2>
-  <form [formGroup]="editCustomerForm" (ngSubmit)="onSubmitUpdate(id)">
+  <form [formGroup]="editCustomerForm" (ngSubmit)="onSubmitUpdate()">
     <table class="table border-dark form-group table-bordered">
       <tr>
         <td>ID:</td>
         <td>
-          <input type="text" class="form-control" formControlName="customerId"
-                 [ngClass]="editCustomerForm.controls.customerId.valid? 'is-valid':'is-invalid'">
-          <small style="color: red" *ngIf="editCustomerForm.controls.customerId.hasError('required') &&
-           editCustomerForm.controls.customerId.touched">id required
+          <input type="number" class="form-control" formControlName="id"
+                 [ngClass]="editCustomerForm.controls.id.valid? 'is-valid':'is-invalid'">
+          <small style="color: red" *ngIf="editCustomerForm.controls.id.hasError('required') &&
+           editCustomerForm.controls.id.touched">id required
           </small>
         </td>
       </tr>

@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import {FormControl, FormGroup} from '@angular/forms';
 import {ProductService} from '../service/product.service';
 import {ActivatedRoute, ParamMap} from '@angular/router';
+import {Category} from '../model/category';
+import {CategoryService} from '../service/category.service';
 
 @Component({
   selector: 'app-product-update',
@@ -11,9 +13,11 @@ import {ActivatedRoute, ParamMap} from '@angular/router';
 export class ProductUpdateComponent implements OnInit {
   productForm: FormGroup;
   id: number;
+  categories: Category[] = [];
 
   constructor(private productService: ProductService,
-              private activatedRoute: ActivatedRoute) {
+              private activatedRoute: ActivatedRoute,
+              private categoryService: CategoryService) {
     this.activatedRoute.paramMap.subscribe((paramMap: ParamMap) => {
       this.id = +paramMap.get('id');
       const product = this.getProduct(this.id);
@@ -24,6 +28,8 @@ export class ProductUpdateComponent implements OnInit {
         description: new FormControl(product.description),
       });
     });
+    this.categoryService.findAll().subscribe(value =>
+      this.categories = value);
   }
 
   ngOnInit(): void {

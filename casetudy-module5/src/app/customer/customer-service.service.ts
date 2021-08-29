@@ -1,42 +1,50 @@
 import {Injectable} from '@angular/core';
 import {Customer} from './customer';
+import {HttpClient} from '@angular/common/http';
+import {Observable} from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CustomerServiceService {
   message: string;
-  customerList: Customer[] = [{
-    customerId: 123, typeCustomerId: 1, nameCustomer: 'Nguyen Bui Tung',
-    dateOfBirthCustomer: '2000-12-12', idCardCustomer: '234456123', phoneCustomer: '0935123123',
-    emailCustomer: 'kkk@gmail.com', addressCustomer: 'Da nang', codeCustomer: '234'
-  }, {
-    customerId: 321, typeCustomerId: 1, nameCustomer: 'Nguyen Van Minh',
-    dateOfBirthCustomer: '2000-12-12', idCardCustomer: '234456123', phoneCustomer: '0935123123',
-    emailCustomer: 'kkk@gmail.com', addressCustomer: 'Da nang', codeCustomer: '234'
-  }, {
-    customerId: 12, typeCustomerId: 1, nameCustomer: 'Nguyen Thi Lan',
-    dateOfBirthCustomer: '2000-12-12', idCardCustomer: '234456123', phoneCustomer: '0935123123',
-    emailCustomer: 'kkk@gmail.com', addressCustomer: 'Da nang', codeCustomer: '234'
-  }, {
-    customerId: 13, typeCustomerId: 1, nameCustomer: 'Nguyen Van Dung',
-    dateOfBirthCustomer: '2000-12-12', idCardCustomer: '234456123', phoneCustomer: '0935123123',
-    emailCustomer: 'kkk@gmail.com', addressCustomer: 'Da nang', codeCustomer: '234'
-  }];
+  API_URL = 'http://localhost:3000/customerList';
 
-  constructor() {
+  constructor(private httpClient: HttpClient) {
   }
 
-  findById(id: number) {
-    return this.customerList.find(customer => customer.customerId === id);
-    console.log('id in service: ' + id);
+  findAll(): Observable<Customer[]> {
+    return this.httpClient.get<Customer[]>(this.API_URL);
   }
 
-  updateCustomer(id: number, customer: any) {
-    for (let i = 0; i < this.customerList.length; i++) {
-      if (this.customerList[i].customerId === id) {
-        this.customerList[i] = customer;
-      }
-    }
+  findById(id: number): Observable<Customer> {
+    return this.httpClient.get<Customer>(this.API_URL + '/' + id);
+  }
+
+  createCustomer(customer: Partial<Customer>): Observable<Customer> {
+    // @ts-ignore
+    return this.httpClient.post(this.API_URL, customer);
+  }
+
+  updateCustomer(customer: Customer): Observable<Customer> {
+    return this.httpClient.patch<Customer>(this.API_URL + '/' + customer.id, customer);
+    console.log('update ok: ' + customer.id);
+  }
+
+  deleteById(id: number): Observable<Customer> {
+    // @ts-ignore
+    return this.httpClient.delete(this.API_URL + '/' + id);
+  }
+
+  searchAll(keyword: string): Observable<Customer[]> {
+    return this.httpClient.get<Customer[]>(this.API_URL + '?q=' + keyword);
+  }
+
+  sortAll() {
+    return this.httpClient.get(this.API_URL + '?_sort=nameCustomer');
+  }
+
+  deleteCustomer(id) {
+    return this.httpClient.delete(this.API_URL + '/' + id);
   }
 }

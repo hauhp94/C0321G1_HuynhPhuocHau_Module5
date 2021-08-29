@@ -3,6 +3,7 @@ import {FormControl, FormGroup, Validators} from '@angular/forms';
 import {CustomerServiceService} from '../customer-service.service';
 import {ActivatedRoute, Router} from '@angular/router';
 import {Customer} from '../customer';
+import {MatSnackBar} from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-edit-customer',
@@ -11,7 +12,7 @@ import {Customer} from '../customer';
 })
 export class EditCustomerComponent implements OnInit {
   editCustomerForm = new FormGroup({
-    customerId: new FormControl('', Validators.required),
+    id: new FormControl('', Validators.required),
     typeCustomerId: new FormControl('', Validators.required),
     nameCustomer: new FormControl('', Validators.required),
     dateOfBirthCustomer: new FormControl('', Validators.required),
@@ -22,28 +23,28 @@ export class EditCustomerComponent implements OnInit {
     codeCustomer: new FormControl('', [Validators.required, Validators.pattern('KH-\\d{4}')])
   });
   id: number;
+  customer: Customer;
 
   constructor(private customerServiceService: CustomerServiceService,
-              private activatedRoute: ActivatedRoute, private router: Router) {
+              private activatedRoute: ActivatedRoute,
+              private router: Router,
+              private snackBar: MatSnackBar) {
     this.id = Number(activatedRoute.snapshot.params.id);
-    console.log('id: ' + this.id);
-    console.log('id type : ' + typeof this.id);
-    const customer = this.findCustomerById(this.id);
-    console.log('name: ' + customer.nameCustomer);
-    this.editCustomerForm.setValue(customer);
+    console.log(this.id);
+    this.customerServiceService.findById(this.id).subscribe(
+      value => this.editCustomerForm.setValue(value));
   }
 
   ngOnInit(): void {
   }
 
-  private findCustomerById(id: number) {
-    return this.customerServiceService.findById(id);
-  }
+  onSubmitUpdate() {
+    this.customer = this.editCustomerForm.value;
 
-  onSubmitUpdate(id: number) {
-    const customer = this.editCustomerForm.value;
-    this.customerServiceService.updateCustomer(id, customer);
+    console.log('form: ' + this.customer.phoneCustomer);
+    this.customerServiceService.updateCustomer(this.customer)
+      .subscribe(value => this.router.navigateByUrl('customer/list'));
     this.customerServiceService.message = 'update ok';
-    this.router.navigateByUrl('customer/list');
+    this.snackBar.open('update ok ' + this.customer.nameCustomer, 'ok');
   }
 }
