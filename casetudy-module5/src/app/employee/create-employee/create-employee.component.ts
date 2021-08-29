@@ -8,7 +8,7 @@ import {FormControl, FormGroup, Validators} from '@angular/forms';
 })
 export class CreateEmployeeComponent implements OnInit {
   createEmployeeForm = new FormGroup({
-    idEmployee: new FormControl('', Validators.required),
+    id: new FormControl('', Validators.required),
     nameEmployee: new FormControl('', Validators.required),
     idPosition: new FormControl('', Validators.required),
     idEducation: new FormControl('', Validators.required),

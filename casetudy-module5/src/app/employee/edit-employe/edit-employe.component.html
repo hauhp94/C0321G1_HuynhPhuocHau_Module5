@@ -5,9 +5,9 @@
     <table class="table table-striped border-dark table-bordered">
       <tr>
         <td>ID nhân viên:</td>
-        <td><input type="number" class="form-control" formControlName="idEmployee">
-          <small style="color: red" *ngIf="editEmployeeForm.controls.idEmployee.hasError('required') &&
-           editEmployeeForm.controls.idEmployee.pristine">required
+        <td><input type="number" class="form-control" formControlName="id" readonly>
+          <small style="color: red" *ngIf="editEmployeeForm.controls.id.hasError('required') &&
+           editEmployeeForm.controls.id.pristine">required
           </small>
         </td>
       </tr>

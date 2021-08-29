@@ -1,45 +1,30 @@
 import {Injectable} from '@angular/core';
 import {Employee} from './employee';
+import {Observable} from 'rxjs';
+import {Customer} from '../customer/customer';
+import {HttpClient} from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
 })
 export class EmployeeServiceService {
-  employeeList: Employee[] = [{
-    idEmployee: 3122, nameEmployee: 'Dung van Binh', idPosition: 2,
-    idEducation: 1, idDivision: 2, dateOfBirthEmployee: '2000-11-11', idCardEmployee: '123321222',
-    salaryEmployee: 333222, phoneEmployee: '0901123123',
-    emailEmployee: 'kkk@gmail.com', addressEmployee: 'Da Lat', codeEmployee: 'NV-1222'
-  }, {
-    idEmployee: 512, nameEmployee: 'Dung van Binh', idPosition: 2,
-    idEducation: 1, idDivision: 2, dateOfBirthEmployee: '2000-11-11', idCardEmployee: '123321222',
-    salaryEmployee: 333222, phoneEmployee: '0901123123',
-    emailEmployee: 'kkk@gmail.com', addressEmployee: 'Da Lat', codeEmployee: 'NV-1222'
-  }, {
-    idEmployee: 222, nameEmployee: 'Dung van Binh', idPosition: 2,
-    idEducation: 1, idDivision: 2, dateOfBirthEmployee: '2000-11-11', idCardEmployee: '123321222',
-    salaryEmployee: 333222, phoneEmployee: '0901123123',
-    emailEmployee: 'kkk@gmail.com', addressEmployee: 'Da Lat', codeEmployee: 'NV-1222'
-  }, {
-    idEmployee: 5531, nameEmployee: 'Dung van Binh', idPosition: 2,
-    idEducation: 1, idDivision: 2, dateOfBirthEmployee: '2000-11-11', idCardEmployee: '123321222',
-    salaryEmployee: 333222, phoneEmployee: '0901123123',
-    emailEmployee: 'kkk@gmail.com', addressEmployee: 'Da Lat', codeEmployee: 'NV-1222'
-  }];
+  API_URL = 'http://localhost:3000/employeeList';
+  employeeList: Employee[];
   message: string;
 
-  constructor() {
-  }
-  findById(id: number) {
-    return this.employeeList.find(employee => employee.idEmployee === id);
-    console.log('id in service: ' + id);
+  constructor(private httpClient: HttpClient) {
   }
 
-  updateEmployee(id: number, employee: any) {
-    for (let i = 0; i < this.employeeList.length; i++) {
-      if (this.employeeList[i].idEmployee === id) {
-        this.employeeList[i] = employee;
-      }
-    }
+  findById(id: number): Observable<Employee> {
+    return this.httpClient.get<Employee>(this.API_URL + '/' + id);
+  }
+
+  findAll(): Observable<Employee[]> {
+    return this.httpClient.get<Employee[]>(this.API_URL);
+  }
+
+  updateEmployee(employee: Employee): Observable<Employee> {
+    return this.httpClient.patch<Employee>(this.API_URL + '/' + employee.id, employee);
+    console.log('update ok: ' + employee.id);
   }
 }

@@ -24,7 +24,7 @@
   <tbody>
   <tr *ngFor="let employee of employeeList;index as i">
     <td>{{i + 1}}</td>
-    <td>{{employee.idEmployee}}</td>
+    <td>{{employee.id}}</td>
     <td>{{employee.nameEmployee | titlecase}}</td>
     <td>{{employee.dateOfBirthEmployee | date}}</td>
     <td>{{employee.idCardEmployee}}</td>
@@ -37,7 +37,7 @@
     <td>{{employee.idEducation}}</td>
     <td>{{employee.idDivision}}</td>
     <td>{{employee.codeEmployee}}</td>
-    <td><a [routerLink]="['/employee/edit',employee.idEmployee]">Edit</a></td>
+    <td><a [routerLink]="['/employee/edit',employee.id]">Edit</a></td>
     <td></td>
   </tr>
   </tbody>

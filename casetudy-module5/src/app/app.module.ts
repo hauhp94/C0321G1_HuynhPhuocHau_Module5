@@ -26,6 +26,7 @@ import {NgxPaginationModule} from 'ngx-pagination';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatDialog, MatDialogModule} from '@angular/material/dialog';
 import {MatSnackBar, MatSnackBarModule} from '@angular/material/snack-bar';
+import { DeleteCustomerComponent } from './customer/delete-customer/delete-customer.component';
 
 
 @NgModule({
@@ -47,6 +48,7 @@ import {MatSnackBar, MatSnackBarModule} from '@angular/material/snack-bar';
         EditEmployeComponent,
         EditServiceComponent,
         SearchCustomerComponent,
+        DeleteCustomerComponent,
     ],
   imports: [
     BrowserModule,

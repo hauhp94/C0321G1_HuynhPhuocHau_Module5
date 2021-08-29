@@ -12,8 +12,9 @@ export class ListEmployeeComponent implements OnInit {
   employeeList: Employee[];
 
   constructor(private employeeServiceService: EmployeeServiceService) {
-   this.employeeList = employeeServiceService.employeeList;
-   this.message = this.employeeServiceService.message;
+    employeeServiceService.findAll().subscribe(value =>
+      this.employeeList = value);
+    this.message = this.employeeServiceService.message;
   }
 
   ngOnInit(): void {

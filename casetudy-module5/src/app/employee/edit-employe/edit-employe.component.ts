@@ -1,8 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
 import {CustomerServiceService} from '../../customer/customer-service.service';
 import {ActivatedRoute, Router} from '@angular/router';
 import {EmployeeServiceService} from '../employee-service.service';
+import {Employee} from '../employee';
+import {MatSnackBar} from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-edit-employe',
@@ -11,7 +13,7 @@ import {EmployeeServiceService} from '../employee-service.service';
 })
 export class EditEmployeComponent implements OnInit {
   editEmployeeForm = new FormGroup({
-    idEmployee: new FormControl('', Validators.required),
+    id: new FormControl('', Validators.required),
     nameEmployee: new FormControl('', Validators.required),
     idPosition: new FormControl('', Validators.required),
     idEducation: new FormControl('', Validators.required),
@@ -28,29 +30,25 @@ export class EditEmployeComponent implements OnInit {
   educationList = ['Dai hoc', 'Cao Dang', 'Trung Cap'];
   divisionList = ['Sale', 'Quan ly', 'Makerting'];
   id: number;
+  employee: Employee;
 
   constructor(private employeeServiceService: EmployeeServiceService,
-              private activatedRoute: ActivatedRoute, private router: Router) {
+              private activatedRoute: ActivatedRoute, private router: Router,
+              private snackBar: MatSnackBar) {
     this.id = Number(activatedRoute.snapshot.params.id);
     console.log('id: ' + this.id);
     console.log('id type : ' + typeof this.id);
-    const employee = this.findEmployeeById(this.id);
-    console.log('name: ' + employee.nameEmployee);
-    this.editEmployeeForm.setValue(employee);
+    this.employeeServiceService.findById(this.id).subscribe(value =>
+      this.editEmployeeForm.setValue(value));
   }
 
   ngOnInit(): void {
   }
 
   onSubmitUpdate() {
-    const employee = this.editEmployeeForm.value;
-    this.employeeServiceService.updateEmployee(this.id, employee);
-    this.employeeServiceService.message = 'update ok';
-    this.router.navigateByUrl('employee/list');
-  }
-
-  private findEmployeeById(id: number) {
-    return this.employeeServiceService.findById(id);
-
+    this.employee = this.editEmployeeForm.value;
+    this.employeeServiceService.updateEmployee(this.employee)
+      .subscribe(value => this.router.navigateByUrl('employee/list'));
+    this.snackBar.open('update ok ' + this.employee.nameEmployee, 'ok');
   }
 }

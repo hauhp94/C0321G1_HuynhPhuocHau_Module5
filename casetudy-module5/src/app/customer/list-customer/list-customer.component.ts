@@ -5,6 +5,7 @@ import {error} from '@angular/compiler/src/util';
 import {MatDialog} from '@angular/material/dialog';
 import {MatSnackBar} from '@angular/material/snack-bar';
 import {Router} from '@angular/router';
+import {DeleteCustomerComponent} from '../delete-customer/delete-customer.component';
 
 @Component({
   selector: 'app-list-customer',
@@ -41,23 +42,24 @@ export class ListCustomerComponent implements OnInit {
   }
 
   openDialogDelete(customerId): void {
-    // this.customerServiceService.findById(customerId).subscribe(customer => {
-    //   const dialogRef = this.dialog.open(DeleteCustomerComponent, {
-    //     width: '700px',
-    //     data: {data1: customer},
-    //     disableClose: true,
-    //     panelClass: 'custom-modalbox'
-    //   });
-    //   dialogRef.afterClosed().subscribe(result => {
-    //     console.log('The dialog was closed');
-    //     this.ngOnInit();
-    //   });
-    // });
-    console.log('open delete function id= ' + customerId);
-    this.customerServiceService.deleteById(customerId)
-      .subscribe(value => this.router.navigateByUrl(''),
-        error1 => console.log('loi'));
-    this.snackbar.open('delete ok', 'ok');
+    console.log('id: ' + customerId);
+    this.customerServiceService.findById(customerId).subscribe(customer => {
+      const dialogRef = this.dialog.open(DeleteCustomerComponent, {
+        width: '700px',
+        data: {data1: customer},
+        disableClose: true,
+        panelClass: 'custom-modalbox'
+      });
+      dialogRef.afterClosed().subscribe(result => {
+        console.log('The dialog was closed');
+        this.ngOnInit();
+      });
+    });
+    // console.log('open delete function id= ' + customerId);
+    // this.customerServiceService.deleteById(customerId)
+    //   .subscribe(value => this.router.navigateByUrl(''),
+    //     error1 => console.log('loi'));
+    // this.snackbar.open('delete ok', 'ok');
   }
 
   // deleteCustomer(customer, i) {

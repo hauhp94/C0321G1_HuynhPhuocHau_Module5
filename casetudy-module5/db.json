@@ -1,29 +1,7 @@
 {
   "customerList": [
     {
-      "id": "55",
-      "typeCustomerId": "2",
-      "nameCustomer": "Hau hp",
-      "dateOfBirthCustomer": "2021-09-09",
-      "idCardCustomer": "345345345",
-      "phoneCustomer": "0901345231",
-      "emailCustomer": "hauhpdn2015@gmail.com",
-      "addressCustomer": "Ca Mau",
-      "codeCustomer": "KH-5345"
-    },
-    {
-      "id": "3433",
-      "typeCustomerId": "43",
-      "nameCustomer": "Hau Huynh1",
-      "dateOfBirthCustomer": "2021-08-11",
-      "idCardCustomer": "3453453452",
-      "phoneCustomer": "0901231246",
-      "emailCustomer": "hauhpdn2015@gmail.com",
-      "addressCustomer": "Binh Thuan",
-      "codeCustomer": "KH-4231"
-    },
-    {
-      "id": "67245",
+      "id": "564555",
       "typeCustomerId": "4",
       "nameCustomer": "Hau Huynh",
       "dateOfBirthCustomer": "2021-08-11",
@@ -34,174 +12,9 @@
       "codeCustomer": "KH-4231"
     },
     {
-      "id": "36346",
+      "id": "22123413534",
       "typeCustomerId": "4",
-      "nameCustomer": "Hau Huynh",
-      "dateOfBirthCustomer": "2021-08-11",
-      "idCardCustomer": "3453453452",
-      "phoneCustomer": "0901231246",
-      "emailCustomer": "hauhpdn2015@gmail.com",
-      "addressCustomer": "Binh Thuan",
-      "codeCustomer": "KH-4231"
-    },
-    {
-      "id": "24562",
-      "typeCustomerId": "4",
-      "nameCustomer": "Hau Huynh",
-      "dateOfBirthCustomer": "2021-08-11",
-      "idCardCustomer": "3453453452",
-      "phoneCustomer": "0901231246",
-      "emailCustomer": "hauhpdn2015@gmail.com",
-      "addressCustomer": "Binh Thuan",
-      "codeCustomer": "KH-4231"
-    },
-    {
-      "id": "24567322",
-      "typeCustomerId": "4",
-      "nameCustomer": "Hau Huynh",
-      "dateOfBirthCustomer": "2021-08-11",
-      "idCardCustomer": "3453453452",
-      "phoneCustomer": "0901231246",
-      "emailCustomer": "hauhpdn2015@gmail.com",
-      "addressCustomer": "Binh Thuan",
-      "codeCustomer": "KH-4231"
-    },
-    {
-      "id": "3524",
-      "typeCustomerId": "4",
-      "nameCustomer": "Hau Huynh",
-      "dateOfBirthCustomer": "2021-08-11",
-      "idCardCustomer": "3453453452",
-      "phoneCustomer": "0901231246",
-      "emailCustomer": "hauhpdn2015@gmail.com",
-      "addressCustomer": "Binh Thuan",
-      "codeCustomer": "KH-4231"
-    },
-    {
-      "id": "1616",
-      "typeCustomerId": "4",
-      "nameCustomer": "Hau Huynh",
-      "dateOfBirthCustomer": "2021-08-11",
-      "idCardCustomer": "3453453452",
-      "phoneCustomer": "0901231246",
-      "emailCustomer": "hauhpdn2015@gmail.com",
-      "addressCustomer": "Binh Thuan",
-      "codeCustomer": "KH-4231"
-    },
-    {
-      "id": "451",
-      "typeCustomerId": "4",
-      "nameCustomer": "Hau Huynh",
-      "dateOfBirthCustomer": "2021-08-11",
-      "idCardCustomer": "3453453452",
-      "phoneCustomer": "0901231246",
-      "emailCustomer": "hauhpdn2015@gmail.com",
-      "addressCustomer": "Binh Thuan",
-      "codeCustomer": "KH-4231"
-    },
-    {
-      "id": "22134",
-      "typeCustomerId": "4",
-      "nameCustomer": "Hau Huynh",
-      "dateOfBirthCustomer": "2021-08-11",
-      "idCardCustomer": "3453453452",
-      "phoneCustomer": "0901231246",
-      "emailCustomer": "hauhpdn2015@gmail.com",
-      "addressCustomer": "Binh Thuan",
-      "codeCustomer": "KH-4231"
-    },
-    {
-      "id": "004",
-      "typeCustomerId": "4",
-      "nameCustomer": "Hau Huynh",
-      "dateOfBirthCustomer": "2021-08-11",
-      "idCardCustomer": "3453453452",
-      "phoneCustomer": "0901231246",
-      "emailCustomer": "hauhpdn2015@gmail.com",
-      "addressCustomer": "Binh Thuan",
-      "codeCustomer": "KH-4231"
-    },
-    {
-      "id": "90",
-      "typeCustomerId": "4",
-      "nameCustomer": "Hau Huynh",
-      "dateOfBirthCustomer": "2021-08-11",
-      "idCardCustomer": "3453453452",
-      "phoneCustomer": "0901231246",
-      "emailCustomer": "hauhpdn2015@gmail.com",
-      "addressCustomer": "Binh Thuan",
-      "codeCustomer": "KH-4231"
-    },
-    {
-      "id": "890",
-      "typeCustomerId": "4",
-      "nameCustomer": "Hau Huynh",
-      "dateOfBirthCustomer": "2021-08-11",
-      "idCardCustomer": "3453453452",
-      "phoneCustomer": "0901231246",
-      "emailCustomer": "hauhpdn2015@gmail.com",
-      "addressCustomer": "Binh Thuan",
-      "codeCustomer": "KH-4231"
-    },
-    {
-      "id": "789",
-      "typeCustomerId": "4",
-      "nameCustomer": "Hau Huynh",
-      "dateOfBirthCustomer": "2021-08-11",
-      "idCardCustomer": "3453453452",
-      "phoneCustomer": "0901231246",
-      "emailCustomer": "hauhpdn2015@gmail.com",
-      "addressCustomer": "Binh Thuan",
-      "codeCustomer": "KH-4231"
-    },
-    {
-      "id": "678",
-      "typeCustomerId": "4",
-      "nameCustomer": "Hau Huynh 44",
-      "dateOfBirthCustomer": "2021-08-11",
-      "idCardCustomer": "3453453452",
-      "phoneCustomer": "0901231246",
-      "emailCustomer": "hauhpdn2015@gmail.com",
-      "addressCustomer": "Binh Thuan",
-      "codeCustomer": "KH-4231"
-    },
-    {
-      "id": "567",
-      "typeCustomerId": "4",
-      "nameCustomer": "Hau Huynh",
-      "dateOfBirthCustomer": "2021-08-11",
-      "idCardCustomer": "3453453452",
-      "phoneCustomer": "0901231246",
-      "emailCustomer": "hauhpdn2015@gmail.com",
-      "addressCustomer": "Binh Thuan",
-      "codeCustomer": "KH-4231"
-    },
-    {
-      "id": "456",
-      "typeCustomerId": "4",
-      "nameCustomer": "Hau Huynh",
-      "dateOfBirthCustomer": "2021-08-11",
-      "idCardCustomer": "3453453452",
-      "phoneCustomer": "0901231246",
-      "emailCustomer": "hauhpdn2015@gmail.com",
-      "addressCustomer": "Binh Thuan",
-      "codeCustomer": "KH-4231"
-    },
-    {
-      "id": "345",
-      "typeCustomerId": "4",
-      "nameCustomer": "Hau Huynh",
-      "dateOfBirthCustomer": "2021-08-11",
-      "idCardCustomer": "3453453452",
-      "phoneCustomer": "0901231246",
-      "emailCustomer": "hauhpdn2015@gmail.com",
-      "addressCustomer": "Binh Thuan",
-      "codeCustomer": "KH-4231"
-    },
-    {
-      "id": "234",
-      "typeCustomerId": "4",
-      "nameCustomer": "Hau Huynh",
+      "nameCustomer": "Hau Huynh222",
       "dateOfBirthCustomer": "2021-08-11",
       "idCardCustomer": "3453453452",
       "phoneCustomer": "0901231246",
@@ -218,6 +31,64 @@
     {
       "name": "Pro",
       "id": 2
+    }
+  ],
+  "employeeList": [
+    {
+      "id": 3122,
+      "nameEmployee": "Dung van Binh",
+      "idPosition": 2,
+      "idEducation": 1,
+      "idDivision": 2,
+      "dateOfBirthEmployee": "2000-11-11",
+      "idCardEmployee": "123321222",
+      "salaryEmployee": 333222,
+      "phoneEmployee": "0901123123",
+      "emailEmployee": "kkk@gmail.com",
+      "addressEmployee": "Da Lat",
+      "codeEmployee": "NV-1222"
+    },
+    {
+      "id": 33,
+      "nameEmployee": "Dung van Binh G",
+      "idPosition": "Phuc Vu",
+      "idEducation": "Dai hoc",
+      "idDivision": "Quan ly",
+      "dateOfBirthEmployee": "2000-11-11",
+      "idCardEmployee": "123321222",
+      "salaryEmployee": 333222,
+      "phoneEmployee": "0901123123",
+      "emailEmployee": "kkk@gmail.com",
+      "addressEmployee": "Da Lat",
+      "codeEmployee": "NV-1222"
+    },
+    {
+      "id": 22,
+      "nameEmployee": "Dung van Binha",
+      "idPosition": 2,
+      "idEducation": 1,
+      "idDivision": 2,
+      "dateOfBirthEmployee": "2000-11-11",
+      "idCardEmployee": "123321222",
+      "salaryEmployee": 333222,
+      "phoneEmployee": "0901123123",
+      "emailEmployee": "kkk@gmail.com",
+      "addressEmployee": "Da Lat",
+      "codeEmployee": "NV-1222"
+    },
+    {
+      "id": 11,
+      "nameEmployee": "Dung van Binhd",
+      "idPosition": 2,
+      "idEducation": 1,
+      "idDivision": 2,
+      "dateOfBirthEmployee": "2000-11-11",
+      "idCardEmployee": "123321222",
+      "salaryEmployee": 333222,
+      "phoneEmployee": "0901123123",
+      "emailEmployee": "kkk@gmail.com",
+      "addressEmployee": "Da Lat",
+      "codeEmployee": "NV-1222"
     }
   ]
 }
