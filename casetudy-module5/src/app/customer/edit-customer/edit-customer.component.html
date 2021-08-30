@@ -6,7 +6,7 @@
       <tr>
         <td>ID:</td>
         <td>
-          <input type="number" class="form-control" formControlName="id"
+          <input type="number" class="form-control" formControlName="id" readonly
                  [ngClass]="editCustomerForm.controls.id.valid? 'is-valid':'is-invalid'">
           <small style="color: red" *ngIf="editCustomerForm.controls.id.hasError('required') &&
            editCustomerForm.controls.id.touched">id required
@@ -26,10 +26,13 @@
       <tr>
         <td>Loại khách hàng:</td>
         <td>
-          <input type="text" class="form-control" formControlName="typeCustomerId"
-                 [ngClass]="editCustomerForm.controls.typeCustomerId.valid? 'is-valid':'is-invalid'">
-          <small style="color: red" *ngIf="editCustomerForm.controls.typeCustomerId.hasError('required') &&
-           editCustomerForm.controls.typeCustomerId.touched">type required
+          <select class="form-control" name="customerType" formControlName="customerType">
+            <option value=""> -- Vui lòng chọn --</option>
+            <option *ngFor=" let ct of customerTypeList" [ngValue]="ct"
+                    [selected]="ct.name===editCustomerForm.value.customerType.name"> {{ct.name}}</option>
+          </select>
+          <small style="color: red" *ngIf="editCustomerForm.controls.customerType.hasError('required') &&
+           editCustomerForm.controls.customerType.touched">type required
           </small>
         </td>
       </tr>

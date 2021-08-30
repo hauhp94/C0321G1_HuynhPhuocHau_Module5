@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import {FormControl, FormGroup} from '@angular/forms';
-import {ProductService} from '../service/product.service';
+import {ProductService} from '../../service/product.service';
 import {ActivatedRoute, ParamMap} from '@angular/router';
-import {Category} from '../model/category';
-import {CategoryService} from '../service/category.service';
+import {Category} from '../../model/category';
+import {CategoryService} from '../../service/category.service';
 
 @Component({
   selector: 'app-product-update',
@@ -28,8 +28,7 @@ export class ProductUpdateComponent implements OnInit {
         description: new FormControl(product.description),
       });
     });
-    this.categoryService.findAll().subscribe(value =>
-      this.categories = value);
+    this.categories = this.categoryService.getAll();
   }
 
   ngOnInit(): void {

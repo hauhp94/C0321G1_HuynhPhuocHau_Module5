@@ -2,6 +2,7 @@ import {Injectable} from '@angular/core';
 import {Customer} from './customer';
 import {HttpClient} from '@angular/common/http';
 import {Observable} from 'rxjs';
+import {CustomerType} from './customer-type';
 
 @Injectable({
   providedIn: 'root'
@@ -9,12 +10,16 @@ import {Observable} from 'rxjs';
 export class CustomerServiceService {
   message: string;
   API_URL = 'http://localhost:3000/customerList';
+  API_URL_TYPE = 'http://localhost:3000/customerType';
 
   constructor(private httpClient: HttpClient) {
   }
 
   findAll(): Observable<Customer[]> {
     return this.httpClient.get<Customer[]>(this.API_URL);
+  }
+  findAllCustomerType(): Observable<CustomerType[]> {
+    return this.httpClient.get<CustomerType[]>(this.API_URL_TYPE);
   }
 
   findById(id: number): Observable<Customer> {

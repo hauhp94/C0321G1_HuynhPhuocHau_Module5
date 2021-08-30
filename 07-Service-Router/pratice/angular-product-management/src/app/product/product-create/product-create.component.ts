@@ -24,8 +24,7 @@ export class ProductCreateComponent implements OnInit {
   constructor(private productService: ProductService,
               private categoryService: CategoryService,
               private router: Router) {
-    this.categoryService.findAll().subscribe(value =>
-      this.categories = value);
+    this.categories = this.categoryService.getAll();
   }
 
   ngOnInit(): void {

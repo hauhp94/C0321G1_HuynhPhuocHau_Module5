@@ -4,6 +4,7 @@ import {Customer} from '../customer';
 import {CustomerServiceService} from '../customer-service.service';
 import {Router} from '@angular/router';
 import {MatSnackBar} from '@angular/material/snack-bar';
+import {CustomerType} from '../customer-type';
 
 
 @Component({
@@ -12,9 +13,10 @@ import {MatSnackBar} from '@angular/material/snack-bar';
   styleUrls: ['./create-customer.component.css']
 })
 export class CreateCustomerComponent implements OnInit {
+  customerTypeList: CustomerType[];
   createCustomerForm = new FormGroup({
     id: new FormControl('', Validators.required),
-    typeCustomerId: new FormControl('', Validators.required),
+    customerType: new FormControl('', Validators.required),
     nameCustomer: new FormControl('', Validators.required),
     dateOfBirthCustomer: new FormControl('', Validators.required),
     idCardCustomer: new FormControl('', Validators.required),
@@ -26,8 +28,8 @@ export class CreateCustomerComponent implements OnInit {
 
   constructor(private customerServiceService: CustomerServiceService,
               private router: Router,
-              private snackBar: MatSnackBar
-  ) {
+              private snackBar: MatSnackBar) {
+    this.customerServiceService.findAllCustomerType().subscribe(value => this.customerTypeList = value);
   }
 
   ngOnInit(): void {

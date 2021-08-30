@@ -26,15 +26,15 @@
     <td>{{i + 1}}</td>
     <td>{{customer.id}}</td>
     <td>{{customer.nameCustomer}}</td>
-    <td>{{customer.typeCustomerId}}</td>
+    <td>{{customer.customerType.name}}</td>
     <td>{{customer.dateOfBirthCustomer}}</td>
     <td>{{customer.idCardCustomer}}</td>
     <td>{{customer.phoneCustomer}}</td>
     <td>{{customer.emailCustomer}}</td>
     <td>{{customer.addressCustomer}}</td>
     <td>{{customer.codeCustomer}}</td>
-    <td><a [routerLink]="['/customer/edit',customer.id]">Edit</a></td>
-    <td><button  (click)="openDialogDelete(customer.id)">delete</button></td>
+    <td><a [routerLink]="['/customer/edit',customer.id]" class="btn btn-warning">Edit</a></td>
+    <td><button  (click)="openDialogDelete(customer.id)" class="btn btn-danger">delete</button></td>
   </tr>
   </tbody>
 </table>

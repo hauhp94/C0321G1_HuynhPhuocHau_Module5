@@ -33,12 +33,12 @@ export class ListCustomerComponent implements OnInit {
               public snackbar: MatSnackBar,
               public dialog: MatDialog,
               private router: Router) {
-    this.customerServiceService.findAll().subscribe(value =>
-      this.customerList = value);
     this.message = customerServiceService.message;
   }
 
   ngOnInit(): void {
+    this.customerServiceService.findAll().subscribe(value =>
+      this.customerList = value);
   }
 
   openDialogDelete(customerId): void {

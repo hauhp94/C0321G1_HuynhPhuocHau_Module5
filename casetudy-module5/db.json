@@ -2,7 +2,10 @@
   "customerList": [
     {
       "id": "564555",
-      "typeCustomerId": "4",
+      "customerType": {
+        "name": "Vip",
+        "id": 1
+      },
       "nameCustomer": "Hau Huynh",
       "dateOfBirthCustomer": "2021-08-11",
       "idCardCustomer": "3453453452",
@@ -12,15 +15,46 @@
       "codeCustomer": "KH-4231"
     },
     {
-      "id": "22123413534",
-      "typeCustomerId": "4",
-      "nameCustomer": "Hau Huynh222",
+      "id": "234",
+      "customerType": {
+        "name": "Pro",
+        "id": 2
+      },
+      "nameCustomer": "Hau Huynh",
       "dateOfBirthCustomer": "2021-08-11",
       "idCardCustomer": "3453453452",
       "phoneCustomer": "0901231246",
       "emailCustomer": "hauhpdn2015@gmail.com",
       "addressCustomer": "Binh Thuan",
       "codeCustomer": "KH-4231"
+    },
+    {
+      "id": "23423",
+      "customerType": {
+        "name": "Vip",
+        "id": 1
+      },
+      "nameCustomer": "Hong",
+      "dateOfBirthCustomer": "2021-08-07",
+      "idCardCustomer": "345345345",
+      "phoneCustomer": "0901123123",
+      "emailCustomer": "hauhpdn2015@gmail.com",
+      "addressCustomer": "Quảng Bình",
+      "codeCustomer": "KH-2341"
+    },
+    {
+      "id": "5675",
+      "customerType": {
+        "name": "Vip",
+        "id": 1
+      },
+      "nameCustomer": "TTTT",
+      "dateOfBirthCustomer": "2021-08-11",
+      "idCardCustomer": "756956734",
+      "phoneCustomer": "0906234121",
+      "emailCustomer": "GGG@GMAIL.COM",
+      "addressCustomer": "GGBSDFW",
+      "codeCustomer": "KH-2412"
     }
   ],
   "customerType": [

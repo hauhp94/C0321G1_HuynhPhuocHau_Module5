@@ -4,6 +4,7 @@ import {CustomerServiceService} from '../customer-service.service';
 import {ActivatedRoute, Router} from '@angular/router';
 import {Customer} from '../customer';
 import {MatSnackBar} from '@angular/material/snack-bar';
+import {CustomerType} from '../customer-type';
 
 @Component({
   selector: 'app-edit-customer',
@@ -13,7 +14,7 @@ import {MatSnackBar} from '@angular/material/snack-bar';
 export class EditCustomerComponent implements OnInit {
   editCustomerForm = new FormGroup({
     id: new FormControl('', Validators.required),
-    typeCustomerId: new FormControl('', Validators.required),
+    customerType: new FormControl('', Validators.required),
     nameCustomer: new FormControl('', Validators.required),
     dateOfBirthCustomer: new FormControl('', Validators.required),
     idCardCustomer: new FormControl('', Validators.required),
@@ -24,6 +25,7 @@ export class EditCustomerComponent implements OnInit {
   });
   id: number;
   customer: Customer;
+  customerTypeList: CustomerType[];
 
   constructor(private customerServiceService: CustomerServiceService,
               private activatedRoute: ActivatedRoute,
@@ -31,20 +33,29 @@ export class EditCustomerComponent implements OnInit {
               private snackBar: MatSnackBar) {
     this.id = Number(activatedRoute.snapshot.params.id);
     console.log(this.id);
-    this.customerServiceService.findById(this.id).subscribe(
-      value => this.editCustomerForm.setValue(value));
   }
 
   ngOnInit(): void {
+    this.getCustomerType();
+    this.getCustomer();
   }
 
   onSubmitUpdate() {
     this.customer = this.editCustomerForm.value;
-
     console.log('form: ' + this.customer.phoneCustomer);
     this.customerServiceService.updateCustomer(this.customer)
       .subscribe(value => this.router.navigateByUrl('customer/list'));
     this.customerServiceService.message = 'update ok';
     this.snackBar.open('update ok ' + this.customer.nameCustomer, 'ok');
+  }
+
+  getCustomer() {
+    this.customerServiceService.findById(this.id).subscribe(
+      value => this.editCustomerForm.setValue(value));
+  }
+
+  getCustomerType() {
+    this.customerServiceService.findAllCustomerType()
+      .subscribe(value => this.customerTypeList = value);
   }
 }
