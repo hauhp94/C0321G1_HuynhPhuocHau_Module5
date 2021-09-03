@@ -1,20 +1,6 @@
 {
   "customerList": [
     {
-      "id": "564555",
-      "customerType": {
-        "name": "Vip",
-        "id": 1
-      },
-      "nameCustomer": "Hau Huynh",
-      "dateOfBirthCustomer": "2021-08-11",
-      "idCardCustomer": "3453453452",
-      "phoneCustomer": "0901231246",
-      "emailCustomer": "hauhpdn2015@gmail.com",
-      "addressCustomer": "Binh Thuan",
-      "codeCustomer": "KH-4231"
-    },
-    {
       "id": "234",
       "customerType": {
         "name": "Pro",
@@ -55,6 +41,76 @@
       "emailCustomer": "GGG@GMAIL.COM",
       "addressCustomer": "GGBSDFW",
       "codeCustomer": "KH-2412"
+    },
+    {
+      "id": "97897",
+      "customerType": {
+        "name": "Pro",
+        "id": 2
+      },
+      "nameCustomer": "KKK",
+      "dateOfBirthCustomer": "2021-09-09",
+      "idCardCustomer": "68567745",
+      "phoneCustomer": "0901123222",
+      "emailCustomer": "hauhpdn2015@gmail.com",
+      "addressCustomer": "HTEF",
+      "codeCustomer": "KH-5340"
+    },
+    {
+      "id": "5895",
+      "customerType": {
+        "name": "Vip",
+        "id": 1
+      },
+      "nameCustomer": "TAS",
+      "dateOfBirthCustomer": "2021-09-10",
+      "idCardCustomer": "53211222",
+      "phoneCustomer": "0906532231",
+      "emailCustomer": "hauhpdn2015@gmail.com",
+      "addressCustomer": "RR",
+      "codeCustomer": "KH-7777"
+    },
+    {
+      "id": "55",
+      "customerType": {
+        "name": "Vip",
+        "id": 1
+      },
+      "nameCustomer": "HT",
+      "dateOfBirthCustomer": "2021-08-19",
+      "idCardCustomer": "554423425",
+      "phoneCustomer": "0904323464",
+      "emailCustomer": "hauhpdn2015@gmail.com",
+      "addressCustomer": "TTT",
+      "codeCustomer": "KH-4423"
+    },
+    {
+      "id": "5535543",
+      "customerType": {
+        "name": "Vip",
+        "id": 1
+      },
+      "nameCustomer": "4TT",
+      "dateOfBirthCustomer": "2021-08-19",
+      "idCardCustomer": "4432345",
+      "phoneCustomer": "0902341355",
+      "emailCustomer": "hauhpdn2015@gmail.com",
+      "addressCustomer": "4TTSDFSE",
+      "codeCustomer": "KH-6653"
+    },
+    {
+      "id": "534123",
+      "customerType": {
+        "name": "Vip",
+        "id": 1
+      },
+      "nameCustomer": "HJER",
+      "dateOfBirthCustomer": "2021-08-24",
+      "idCardCustomer": "3212355",
+      "phoneCustomer": "0903334234",
+      "emailCustomer": "hauhpdn2015@gmail.com",
+      "addressCustomer": "5R",
+      "codeCustomer": "KH-3452"
     }
   ],
   "customerType": [

@@ -1,0 +1,26 @@
+<div class="container">
+  <button [routerLink]="['create']" class="btn btn-success m-2"> Create</button>
+  <input [(ngModel)]="searchKey" class="form-control m-2" placeholder="search all">
+  <table class="table">
+    <tr>
+      <th>STT</th>
+      <th>Ma suat chieu</th>
+      <th>Ten Phim</th>
+      <th>Ngay chieu</th>
+      <th>So luong ve</th>
+      <th>Action</th>
+    </tr>
+    <tr *ngFor="let sc of danhSachSuatChieu|filter:searchKey |paginate:{ itemsPerPage: 5, currentPage: p }, let i = index">
+      <td> {{i + 1}}</td>
+      <td> {{sc.maSuatChieu}}</td>
+      <td> {{sc.phim.name}}</td>
+      <td> {{sc.ngayChieu}}</td>
+      <td>{{sc.soLuongVe}}</td>
+      <td>
+        <button (click)="openDialogDelete(sc.id)" class="btn btn-danger">delete</button>
+      </td>
+    </tr>
+  </table>
+  <pagination-controls (pageChange)="p = $event"></pagination-controls>
+
+</div>

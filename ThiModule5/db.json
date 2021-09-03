@@ -1,0 +1,101 @@
+{
+  "customerList": [
+    {
+      "name": "Hau Huynh",
+      "id": 2,
+      "code": "KH-3421"
+    },
+    {
+      "name": "Binh Huynh",
+      "id": 1,
+      "code": "KH-0022"
+    },
+    {
+      "name": "Nguyen Dong",
+      "id": 3,
+      "code": "KH-4324"
+    }
+  ],
+  "savingList": [
+    {
+      "id": 121,
+      "customer": {
+        "name": "Bui Tien Dung",
+        "id": 2,
+        "code": "KH-3421"
+      },
+      "date": {
+        "dateOpen": "2020-09-02",
+        "dateStart": "2021-09-03"
+      },
+      "period": "3 tháng",
+      "deposit": "500000088",
+      "rate": 4,
+      "offer": "ao mua gio"
+    },
+    {
+      "id": 774,
+      "customer": {
+        "name": "Hau Huynh",
+        "id": 2,
+        "code": "KH-3421"
+      },
+      "date": {
+        "dateOpen": "2020-12-12",
+        "dateStart": "2021-12-12"
+      },
+      "period": "1 năm",
+      "deposit": "500000021",
+      "rate": 4,
+      "offer": "ao mua"
+    },
+    {
+      "id": 2231,
+      "customer": {
+        "name": "Nguyen Van Tuan Dung",
+        "id": 3,
+        "code": "KH-4324"
+      },
+      "date": {
+        "dateOpen": "2020-12-12",
+        "dateStart": "2021-12-12"
+      },
+      "period": "1 năm",
+      "deposit": "80000000",
+      "rate": "2",
+      "offer": "ao mua"
+    },
+    {
+      "id": 2342,
+      "customer": {
+        "name": "Nguyen Dong Dung",
+        "id": 3,
+        "code": "KH-4324"
+      },
+      "date": {
+        "dateOpen": "2020-12-12",
+        "dateStart": "2021-12-12"
+      },
+      "period": "3 tháng",
+      "deposit": "500000055",
+      "rate": 4,
+      "offer": "ao mua"
+    },
+    {
+      "id": 9999,
+      "customer": {
+        "name": "Nguyen Tien Linh",
+        "id": 3,
+        "code": "KH-4324"
+      },
+      "date": {
+        "dateOpen": "2020-12-12",
+        "dateStart": "2021-12-12"
+      },
+      "period": "5 năm",
+      "deposit": "15000000",
+      "rate": "2",
+      "offer": "ao mua"
+    }
+  ]
+}

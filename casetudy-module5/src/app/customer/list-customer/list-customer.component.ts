@@ -13,6 +13,13 @@ import {DeleteCustomerComponent} from '../delete-customer/delete-customer.compon
   styleUrls: ['./list-customer.component.css']
 })
 export class ListCustomerComponent implements OnInit {
+
+  constructor(private customerServiceService: CustomerServiceService,
+              public snackbar: MatSnackBar,
+              public dialog: MatDialog,
+              private router: Router) {
+    this.message = customerServiceService.message;
+  }
   // public maxSize: number = 5;
   // public directionLinks: boolean = true;
   // public autoHide: boolean = false;
@@ -29,12 +36,14 @@ export class ListCustomerComponent implements OnInit {
   keyword: string;
   p: string | number;
 
-  constructor(private customerServiceService: CustomerServiceService,
-              public snackbar: MatSnackBar,
-              public dialog: MatDialog,
-              private router: Router) {
-    this.message = customerServiceService.message;
-  }
+  // deleteCustomer(customer, i) {
+  //   this.collection.this.collection.splice(i, 1);
+  //   this.customerService.deleteCustomer(customer.id).subscribe((result) => {
+  //     console.log('Data is Deleted Successfull !', result);
+  //     this.alert = true;
+  //   });
+  // }
+  searchFilter: any;
 
   ngOnInit(): void {
     this.customerServiceService.findAll().subscribe(value =>
@@ -61,14 +70,6 @@ export class ListCustomerComponent implements OnInit {
     //     error1 => console.log('loi'));
     // this.snackbar.open('delete ok', 'ok');
   }
-
-  // deleteCustomer(customer, i) {
-  //   this.collection.this.collection.splice(i, 1);
-  //   this.customerService.deleteCustomer(customer.id).subscribe((result) => {
-  //     console.log('Data is Deleted Successfull !', result);
-  //     this.alert = true;
-  //   });
-  // }
 
   searchAll() {
     this.customerServiceService.searchAll(this.keyword).subscribe(value =>

@@ -39,8 +39,10 @@ export class CreateCustomerComponent implements OnInit {
     const customer = this.createCustomerForm.value;
     console.log('VALUE: ' + this.createCustomerForm.value);
     this.customerServiceService.createCustomer(customer).subscribe(value =>
-      this.router.navigateByUrl(''));
+      this.router.navigateByUrl('')
+      , error => console.log('loi')
+      , () => this.snackBar.open('create ok ', 'ok'));
     this.customerServiceService.message = 'create ok';
-    this.snackBar.open('create ok ', 'ok');
+
   }
 }

@@ -27,6 +27,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatDialog, MatDialogModule} from '@angular/material/dialog';
 import {MatSnackBar, MatSnackBarModule} from '@angular/material/snack-bar';
 import { DeleteCustomerComponent } from './customer/delete-customer/delete-customer.component';
+import {Ng2SearchPipeModule} from 'ng2-search-filter';
 
 
 @NgModule({
@@ -60,7 +61,8 @@ import { DeleteCustomerComponent } from './customer/delete-customer/delete-custo
     NgxPaginationModule,
     BrowserAnimationsModule,
     MatSnackBarModule,
-    MatDialogModule
+    MatDialogModule,
+    Ng2SearchPipeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

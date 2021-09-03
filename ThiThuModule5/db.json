@@ -1,0 +1,160 @@
+{
+  "suatChieuPhim": [
+    {
+      "id": "564555",
+      "phim": {
+        "name": "Bo Gia",
+        "id": 1
+      },
+      "maSuatChieu": "CI-1231",
+      "ngayChieu": "2021-08-11",
+      "soLuongVe": 50
+    },
+    {
+      "id": "1342",
+      "maSuatChieu": "CI-7733",
+      "phim": {
+        "name": "Bo Gia",
+        "id": 1
+      },
+      "ngayChieu": "2021-08-14",
+      "soLuongVe": "1232"
+    },
+    {
+      "id": "342341",
+      "maSuatChieu": "CI-5533",
+      "phim": {
+        "name": "Mat Biec",
+        "id": 2
+      },
+      "ngayChieu": "2021-08-06",
+      "soLuongVe": "7766"
+    },
+    {
+      "id": "4",
+      "maSuatChieu": "CI-3332",
+      "phim": {
+        "name": "Bo Gia",
+        "id": 1
+      },
+      "ngayChieu": "2021-08-07",
+      "soLuongVe": "22"
+    },
+    {
+      "id": "2",
+      "maSuatChieu": "CI-3332",
+      "phim": {
+        "name": "Bo Gia",
+        "id": 1
+      },
+      "ngayChieu": "2021-08-07",
+      "soLuongVe": "22"
+    },
+    {
+      "id": "345",
+      "maSuatChieu": "CI-3332",
+      "phim": {
+        "name": "Bo Gia",
+        "id": 1
+      },
+      "ngayChieu": "2021-08-07",
+      "soLuongVe": "22"
+    },
+    {
+      "id": "23123123",
+      "maSuatChieu": "CI-5544",
+      "phim": {
+        "name": "Toi thay hoa vang tren co xanh",
+        "id": 3
+      },
+      "ngayChieu": "2021-08-13",
+      "soLuongVe": "44412"
+    },
+    {
+      "id": "452",
+      "maSuatChieu": "CI-5552",
+      "phim": {
+        "name": "Bo Gia",
+        "id": 1
+      },
+      "ngayChieu": "2021-08-05",
+      "soLuongVe": "443"
+    }
+  ],
+  "danhSachPhim": [
+    {
+      "name": "Bo Gia",
+      "id": 1
+    },
+    {
+      "name": "Mat Biec",
+      "id": 2
+    },
+    {
+      "name": "Toi thay hoa vang tren co xanh",
+      "id": 3
+    },
+    {
+      "name": "Avatar 2",
+      "id": 4
+    }
+  ],
+  "employeeList": [
+    {
+      "id": 3122,
+      "nameEmployee": "Dung van Binh",
+      "idPosition": 2,
+      "idEducation": 1,
+      "idDivision": 2,
+      "dateOfBirthEmployee": "2000-11-11",
+      "idCardEmployee": "123321222",
+      "salaryEmployee": 333222,
+      "phoneEmployee": "0901123123",
+      "emailEmployee": "kkk@gmail.com",
+      "addressEmployee": "Da Lat",
+      "codeEmployee": "NV-1222"
+    },
+    {
+      "id": 33,
+      "nameEmployee": "Dung van Binh G",
+      "idPosition": "Phuc Vu",
+      "idEducation": "Dai hoc",
+      "idDivision": "Quan ly",
+      "dateOfBirthEmployee": "2000-11-11",
+      "idCardEmployee": "123321222",
+      "salaryEmployee": 333222,
+      "phoneEmployee": "0901123123",
+      "emailEmployee": "kkk@gmail.com",
+      "addressEmployee": "Da Lat",
+      "codeEmployee": "NV-1222"
+    },
+    {
+      "id": 22,
+      "nameEmployee": "Dung van Binha",
+      "idPosition": 2,
+      "idEducation": 1,
+      "idDivision": 2,
+      "dateOfBirthEmployee": "2000-11-11",
+      "idCardEmployee": "123321222",
+      "salaryEmployee": 333222,
+      "phoneEmployee": "0901123123",
+      "emailEmployee": "kkk@gmail.com",
+      "addressEmployee": "Da Lat",
+      "codeEmployee": "NV-1222"
+    },
+    {
+      "id": 11,
+      "nameEmployee": "Dung van Binhd",
+      "idPosition": 2,
+      "idEducation": 1,
+      "idDivision": 2,
+      "dateOfBirthEmployee": "2000-11-11",
+      "idCardEmployee": "123321222",
+      "salaryEmployee": 333222,
+      "phoneEmployee": "0901123123",
+      "emailEmployee": "kkk@gmail.com",
+      "addressEmployee": "Da Lat",
+      "codeEmployee": "NV-1222"
+    }
+  ]
+}
