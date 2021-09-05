@@ -7,15 +7,16 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeaderComponent } from './layout/header/header.component';
 import { FooterComponent } from './layout/footer/footer.component';
 import { HomeComponent } from './layout/home/home.component';
-import { ListSavingComponent } from './SavingManager/list-saving/list-saving.component';
+import { ListSavingComponent } from './saving-manager/list-saving/list-saving.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {NgxPaginationModule} from 'ngx-pagination';
 import {HttpClientModule} from '@angular/common/http';
-import { EditSavingComponent } from './SavingManager/edit-saving/edit-saving.component';
+import { EditSavingComponent } from './saving-manager/edit-saving/edit-saving.component';
 import {MatSnackBar, MatSnackBarModule} from '@angular/material/snack-bar';
 import {MatDialogModule} from '@angular/material/dialog';
-import { DeleteSavingComponent } from './SavingManager/delete-saving/delete-saving.component';
+import { DeleteSavingComponent } from './saving-manager/delete-saving/delete-saving.component';
 import {Ng2SearchPipeModule} from 'ng2-search-filter';
+import { ChartDemoComponent } from './chart/chart-demo/chart-demo.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,7 +25,8 @@ import {Ng2SearchPipeModule} from 'ng2-search-filter';
     HomeComponent,
     ListSavingComponent,
     EditSavingComponent,
-    DeleteSavingComponent
+    DeleteSavingComponent,
+    ChartDemoComponent
   ],
   imports: [
     BrowserModule,

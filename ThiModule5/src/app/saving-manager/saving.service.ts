@@ -3,6 +3,7 @@ import {Observable} from 'rxjs';
 import {Saving} from './saving';
 import {HttpClient} from '@angular/common/http';
 import {Customer} from './customer';
+import {Page} from 'ngx-pagination/dist/pagination-controls.directive';
 
 @Injectable({
   providedIn: 'root'
@@ -19,6 +20,7 @@ export class SavingService {
   findAll(): Observable<Saving[]> {
     return this.httpClient.get<Saving[]>(this.API_URL);
   }
+
 
   // findAllCustomer(): Observable<Customer[]> {
   //   return this.httpClient.get<Customer[]>(this.API_URL_CUSTOMER);
@@ -37,7 +39,7 @@ export class SavingService {
     return this.httpClient.delete(this.API_URL + '/' + id);
   }
 
-  searchAll(code: string, name: string): Observable<Saving[]> {
-    return this.httpClient.get<Saving[]>(this.API_URL + '?id=' + code);
+  searchAll(keyword: string): Observable<Saving[]> {
+    return this.httpClient.get<Saving[]>(this.API_URL + '/search?keyword=' + keyword);
   }
 }
